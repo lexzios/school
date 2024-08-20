@@ -1,0 +1,205 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	 Training <small>Settings</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.training.path}}">Training</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Settings</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+<button class="btn btn-default" ng-click="vm.ui.tab.jobQualification = !vm.ui.tab.jobQualification">Job Qualification</button>
+
+<hr>
+
+<div collapse="vm.ui.tab.jobQualification">
+	<div class="portlet light bg-inverse">
+		<div class="portlet-title">
+			<div class="caption">
+				<i class="icon-settings font-red-sunglo"></i>
+				<span class="caption-subject font-red-sunglo bold uppercase">Job Qualification</span>
+			</div>
+		</div>
+		<div class="portlet-body form">
+			<!-- BEGIN FORM-->
+			<form action="#" class="horizontal-form">
+				<div class="form-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Position</label>
+								<input type="text" id="firstName" class="form-control" placeholder="Enter Position">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Department</label>
+								<input type="text" id="lastName" class="form-control" placeholder="Enter Department">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Direktorat</label>
+								<input type="text" id="firstName" class="form-control" placeholder="Enter Direktorat">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Jabatan Atasan Langsung</label>
+								<input type="text" id="lastName" class="form-control" placeholder="Enter Jabatan Atasan Langsung">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+
+					<hr>
+
+					<div class="portlet">
+						<div class="portlet-body">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>
+												 #
+											</th>
+											<th>
+												 Tuliskan dalam 1 atau 2 kalimat saja fungsi utama jabatan ini dan tugas-tugas yang dikerjakan berkaitan dengan hal-hal apa saja
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="col-md-4">
+												Fungsi Jabatan
+											</td>
+											<td class="col-md-8">
+												<textarea row="7" class="form-control"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="portlet">
+						<div class="portlet-body">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>
+												 #
+											</th>
+											<th>
+												 Persyaratan Pendidikan
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="col-md-4">
+												Pendidikan formal
+											</td>
+											<td class="col-md-8">
+												<textarea row="7" class="form-control"></textarea>
+											</td>
+										</tr>
+										<tr>
+											<td class="col-md-4">
+												Pelatihan yang harus diikuti
+											</td>
+											<td class="col-md-8">
+												<textarea row="7" class="form-control"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="portlet">
+						<div class="portlet-body">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>
+												 #
+											</th>
+											<th>
+												 Pengalaman kerja minimal. Pemegang jabatan ini harus mampu / berpengalaman dibidang:
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="col-md-4">
+												Pengalaman Kerja
+											</td>
+											<td class="col-md-8">
+												<textarea row="7" class="form-control"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+					<div class="portlet">
+						<div class="portlet-body">
+							<div class="table-responsive">
+								<table class="table table-striped">
+									<thead>
+										<tr>
+											<th>
+												 #
+											</th>
+											<th>
+												 Persyaratan fisik yang diperlukan
+											</th>
+										</tr>
+										</thead>
+										<tbody>
+										<tr>
+											<td class="col-md-4">
+												Persyaratan Fisik
+											</td>
+											<td class="col-md-8">
+												<textarea row="7" class="form-control"></textarea>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<div class="form-actions right">
+					<a href="#" type="submit" class="btn blue"><i class="fa fa-save"></i> Submit</a>
+				</div>
+			</form>
+			<!-- END FORM-->
+		</div>
+	</div>
+</div>

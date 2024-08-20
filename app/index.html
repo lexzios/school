@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en" class="no-js" ng-app="lspr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="LSPR | Human Resource Information System">
+    <meta name="author" content="developer@ions-tech.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="text/javascript">
+      WebFontConfig = {
+        google: { families: [ 'Open+Sans:700,300,600,400:latin' ] }
+      };
+      (function() {
+        var wf = document.createElement('script');
+        wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+          '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+        wf.type = 'text/javascript';
+        wf.async = 'true';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(wf, s);
+      })();
+      </script>
+
+    <!-- build:css /styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/bower_components/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.css" />
+    <link rel="stylesheet" href="/bower_components/simple-line-icons/css/simple-line-icons.css" />
+    <link rel="stylesheet" href="/bower_components/select2/dist/css/select2.css" />
+    <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+    <link rel="stylesheet" href="/bower_components/fullcalendar/dist/fullcalendar.css" />
+    <link rel="stylesheet" href="/bower_components/angular-tooltips/dist/angular-tooltips.min.css" />
+    <link rel="stylesheet" href="/bower_components/angular-dialog-service/dist/dialogs.min.css"></link>
+    <link rel="stylesheet" href="/bower_components/ng-table/dist/ng-table.min.css"></link>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css /styles/lspr.css -->
+    <link href="/layout/theme/component.css" rel="stylesheet" type="text/css"/>
+    <link href="/layout/theme/plugin.css" rel="stylesheet" type="text/css"/>
+    <link href="/layout/theme/layout.css" rel="stylesheet" type="text/css"/>
+    <link href="/layout/theme/skin.css" rel="stylesheet" type="text/css"/>
+    <link href="/layout/theme/error.css" rel="stylesheet" type="text/css"/>
+
+    <link rel="stylesheet" href="/main/lspr.css">
+    <link href="/components/02-employee/profile/employee-profile.css" rel="stylesheet" type="text/css"/>
+    <!-- endbuild -->
+
+    <base href="/">
+  </head>
+  <body class="page-md page-sidebar-closed-hide-logo" ng-class="{'page-container-bg-solid': settings.layout.pageBodySolid, 'page-sidebar-closed': settings.layout.pageSidebarClosed, 'page-header-fixed': layout.isInternal, 'page-404-full-page': layout.lock}">
+
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- BEGIN HEADER -->
+    <div ng-include="layout.isInternal ? '/layout/html/_header.html' : null" ng-controller="HeaderCtrl" ng-show="layout.isInternal" class="page-header navbar navbar-fixed-top">
+    </div>
+    <!-- END HEADER -->
+
+    <div class="clearfix">
+    </div>
+
+    <!-- BEGIN CONTAINER -->
+    <div class="page-container">
+      <!-- BEGIN SIDEBAR -->
+      <div ng-include="layout.isInternal ? '/layout/html/_sidebar.html' : null" ng-controller="SidebarCtrl as vm" class="page-sidebar-wrapper">
+      </div>
+      <!-- END SIDEBAR -->
+
+      <!-- BEGIN CONTENT -->
+      <div ng-class="layout.isInternal ? 'page-content-wrapper' : ''">
+        <div class="page-content">
+          <div class="main-content" ng-view></div>
+        </div>
+      </div>
+      <!-- END CONTENT -->
+
+    </div>
+    <!-- END CONTAINER -->
+
+    <!-- BEGIN FOOTER -->
+    <div ng-include="layout.isInternal ? '/layout/html/_footer.html' : null" ng-controller="FooterCtrl" class="page-footer">
+    </div>
+    <!-- END FOOTER -->
+
+    <!-- build:js(.) /scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/angular/angular.min.js"></script>
+    <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/bower_components/angular-cookies/angular-cookies.min.js"></script>
+    <script src="/bower_components/angular-messages/angular-messages.min.js"></script>
+    <script src="/bower_components/angular-route/angular-route.min.js"></script>
+    <script src="/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="/bower_components/jquery.slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="/bower_components/blockui/jquery.blockUI.js"></script>
+    <script src="/bower_components/bootstrap-switch/dist/js/bootstrap-switch.min.js"></script>
+    <script src="/bower_components/angular-sanitize/angular-sanitize.min.js"></script>
+    <script src="/bower_components/angular-touch/angular-touch.min.js"></script>
+    <script src="/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="/bower_components/select2/dist/js/select2.min.js"></script>
+    <script src="/bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="/bower_components/moment/min/moment.min.js"></script>
+    <script src="/bower_components/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script src="/bower_components/angular-ui-calendar/src/calendar.js"></script>
+    <script src="/bower_components/angular-tooltips/dist/angular-tooltips.min.js"></script>
+    <script src="/bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+    <script src="/bower_components/angular-dialog-service/dist/dialogs.min.js"></script>
+    <script src="/bower_components/satellizer/satellizer.min.js"></script>
+    <script src="/bower_components/restangular/dist/restangular.min.js"></script>
+    <script src="/bower_components/lodash/lodash.min.js"></script>
+    <script src="/bower_components/ng-table/dist/ng-table.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js /scripts/ions.js -->
+        <script src="/libs/ions/util/byte-util.js" type="text/javascript"></script>
+        <script src="/libs/ions/ions.js" type="text/javascript"></script>
+        <script src="/libs/ions/http/ions-http.js" type="text/javascript"></script>
+        <script src="/libs/ions/http/token-factory.js" type="text/javascript"></script>
+        <script src="/libs/ions/http/http-interceptor.js" type="text/javascript"></script>
+        <!-- endbuild -->
+
+        <!-- build:js /scripts/lspr.js -->
+        <script src="/layout/theme/js/metronic.js" type="text/javascript"></script>
+        <script src="/layout/theme/js/layout.js" type="text/javascript"></script>
+        <script src="/layout/theme/js/quick-sidebar.js" type="text/javascript"></script>
+        <script src="/main/lspr.js"></script>
+        <script src="/main/lspr-route.js"></script>
+        <script src="/main/lspr-constant.js"></script>
+        <script src="/main/lspr-controller.js"></script>
+        <!-- endbuild -->
+
+        <!-- build:js /scripts/components.js -->
+        <script src="/components/00-dashboard/dashboard.js"></script>
+        <script src="/components/00-dashboard/dashboard-route.js"></script>
+        <script src="/components/00-dashboard/settings/settings.js"></script>
+        <script src="/components/00-dashboard/settings/settings-job-position.js"></script>
+
+        <script src="/components/01-recruitment/recruitment.js"></script>
+        <script src="/components/01-recruitment/recruitment-route.js"></script>
+        <script src="/components/01-recruitment/settings/recruitment-settings.js"></script>
+        <script src="/components/01-recruitment/requisition/requisition.js"></script>
+        <script src="/components/01-recruitment/requisition/create/create-requisition.js"></script>
+        <script src="/components/01-recruitment/requisition/edit/edit-requisition.js"></script>
+        <script src="/components/01-recruitment/requisition/detail/detail-requisition.js"></script>
+        <script src="/components/01-recruitment/interview/interview.js"></script>
+        <script src="/components/01-recruitment/interview/schedule/interview-schedule.js"></script>
+        <script src="/components/01-recruitment/interview/schedule/search/search-schedule.js"></script>
+        <script src="/components/01-recruitment/interview/schedule/create/create-schedule.js"></script>
+        <script src="/components/01-recruitment/interview/schedule/edit/edit-schedule.js"></script>
+        <script src="/components/01-recruitment/interview/result/interview-result.js"></script>
+        <script src="/components/01-recruitment/interview/result/create/create-result.js"></script>
+        <script src="/components/01-recruitment/interview/result/user/detail/detail-result.js"></script>
+        <script src="/components/01-recruitment/interview/result/human-resource/detail-hr-interview-result.js"></script>
+        <script src="/components/01-recruitment/applicant/applicant.js"></script>
+        <script src="/components/01-recruitment/applicant/create/create-applicant.js"></script>
+        <script src="/components/01-recruitment/applicant/create/create-applicant-public.js"></script>
+        <script src="/components/01-recruitment/applicant/detail/detail-applicant.js"></script>
+        <script src="/components/01-recruitment/applicant/interview/applicant-interview.js"></script>
+        <script src="/components/01-recruitment/applicant/entrance/applicant-entrance.js"></script>
+
+        <script src="/components/02-employee/employee.js"></script>
+        <script src="/components/02-employee/employee-route.js"></script>
+        <script src="/components/02-employee/list/employee-list.js"></script>
+        <script src="/components/02-employee/profile/employee-profile.js"></script>
+        <script src="/components/02-employee/attendance/employee-attendance.js"></script>
+        <script src="/components/02-employee/training/employee-training.js"></script>
+        <script src="/components/02-employee/loan/employee-loan.js"></script>
+        <script src="/components/02-employee/medical/employee-medical.js"></script>
+        <script src="/components/02-employee/allowance/employee-allowance.js"></script>
+        <script src="/components/02-employee/allowance/list/employee-allowance-list.js"></script>
+        <script src="/components/02-employee/allowance/education/create/create-education-allowance.js"></script>
+        <script src="/components/02-employee/allowance/education/detail/education-allowance-detail.js"></script>
+        <script src="/components/02-employee/change-status/change-status.js"></script>
+        <script src="/components/02-employee/change-status/edit/edit-change.js"></script>
+        <script src="/components/02-employee/notice-letter/notice-letter.js"></script>
+        <script src="/components/02-employee/notice-letter/create/create-notice-letter.js"></script>
+        <script src="/components/02-employee/notice-letter/detail/detail-notice-letter.js"></script>
+        <script src="/components/02-employee/exit/employee-exit.js"></script>
+        <script src="/components/02-employee/exit/create/create-exit.js"></script>
+        <script src="/components/02-employee/exit/edit/edit-exit.js"></script>
+        <script src="/components/02-employee/exit/detail/detail-exit.js"></script>
+        <script src="/components/02-employee/exit/interview/exit-interview.js"></script>
+        <script src="/components/02-employee/exit/interview/create/create-exit-interview.js"></script>
+        <script src="/components/02-employee/exit/interview/edit/edit-exit-interview.js"></script>
+        <script src="/components/02-employee/exit/interview/detail/detail-exit-interview.js"></script>
+        <script src="/components/02-employee/exit/checklist/exit-checklist.js"></script>
+        <script src="/components/02-employee/settings/employee-settings.js"></script>
+        <script src="/components/02-employee/resigned-employee/resigned-employee.js"></script>
+
+        <script src="/components/03-attendance/attendance.js"></script>
+        <script src="/components/03-attendance/attendance-route.js"></script>
+        <script src="/components/03-attendance/time/time-management.js"></script>
+        <script src="/components/03-attendance/time/checkin/checkin.js"></script>
+        <script src="/components/03-attendance/time/checkout/checkout.js"></script>
+        <script src="/components/03-attendance/leave/create/create-leave.js"></script>
+        <script src="/components/03-attendance/leave/edit/edit-leave.js"></script>
+        <script src="/components/03-attendance/leave/detail/detail-leave.js"></script>
+        <script src="/components/03-attendance/leave/attendance-leave.js"></script>
+        <script src="/components/03-attendance/permission/attendance-permission.js"></script>
+        <script src="/components/03-attendance/permission/create/create-attendance-permission.js"></script>
+        <script src="/components/03-attendance/permission/detail/detail-attendance-permission.js"></script>
+        <script src="/components/03-attendance/settings/attendance-settings.js"></script>
+        <script src="/components/03-attendance/work-leave-permission/work-leave-permission.js"></script>
+        <script src="/components/03-attendance/work-leave-permission/create/create-work-leave-permission.js"></script>
+        <script src="/components/03-attendance/work-leave-permission/detail/detail-work-leave-permission.js"></script>
+        <script src="/components/03-attendance/leave-without-pay/leave-without-pay.js"></script>
+        <script src="/components/03-attendance/leave-without-pay/create/create-leave-without-pay.js"></script>
+        <script src="/components/03-attendance/leave-without-pay/detail/detail-leave-without-pay.js"></script>
+
+        <script src="/components/04-training/training.js"></script>
+        <script src="/components/04-training/training-route.js"></script>
+        <script src="/components/04-training/requisition/training-requisition.js"></script>
+        <script src="/components/04-training/requisition/create/create-requisition.js"></script>
+        <script src="/components/04-training/requisition/edit/edit-requisition.js"></script>
+        <script src="/components/04-training/schedule/training-schedule.js"></script>
+        <script src="/components/04-training/internal/internal-training.js"></script>
+        <script src="/components/04-training/internal/create/create-internal-training.js"></script>
+        <script src="/components/04-training/internal/detail/detail-internal-training.js"></script>
+        <script src="/components/04-training/internal/evaluation/training-evaluation.js"></script>
+        <script src="/components/04-training/internal/evaluation/detail/detail-evaluation.js"></script>
+        <script src="/components/04-training/internal/feedback/training-feedback.js"></script>
+        <script src="/components/04-training/internal/feedback/create/create-feedback.js"></script>
+        <script src="/components/04-training/internal/feedback/detail/detail-feedback.js"></script>
+        <script src="/components/04-training/internal/participant/training-participant.js"></script>
+        <script src="/components/04-training/internal/participant/attendance/participant-attendance.js"></script>
+        <script src="/components/04-training/external/external-training.js"></script>
+        <script src="/components/04-training/external/create/create-external-training.js"></script>
+        <script src="/components/04-training/external/detail/detail-external-training.js"></script>
+        <script src="/components/04-training/external/feedback/training-feedback.js"></script>
+        <script src="/components/04-training/external/feedback/create/create-feedback.js"></script>
+        <script src="/components/04-training/external/feedback/detail/detail-feedback.js"></script>
+        <script src="/components/04-training/external/participant/training-participant.js"></script>
+        <script src="/components/04-training/external/participant/attendance/participant-attendance.js"></script>
+        <script src="/components/04-training/scholarship/training-scholarship.js"></script>
+        <script src="/components/04-training/scholarship/create/create-scholarship.js"></script>
+        <script src="/components/04-training/scholarship/edit/edit-scholarship.js"></script>
+        <script src="/components/04-training/settings/training-settings.js"></script>
+        <script src="/components/04-training/scholarship/payment-detail/payment-detail.js"></script>
+        <script src="/components/04-training/business-trip/business-trip.js"></script>
+        <script src="/components/04-training/business-trip/create/create-business-trip.js"></script>
+        <script src="/components/04-training/business-trip/detail/detail-business-trip.js"></script>
+
+        <script src="/components/05-performance-appraisal/performance-appraisal.js"></script>
+        <script src="/components/05-performance-appraisal/performance-appraisal-route.js"></script>
+        <script src="/components/05-performance-appraisal/settings/performance-appraisal-settings.js"></script>
+        <script src="/components/05-performance-appraisal/managerial-appraisal/create/create-managerial-appraisal.js"></script>
+        <script src="/components/05-performance-appraisal/employee-appraisal/create/create-employee-appraisal.js"></script>
+
+        <script src="/components/06-talent-management/talent-management.js"></script>
+        <script src="/components/06-talent-management/talent-management-route.js"></script>
+        <script src="/components/06-talent-management/settings/talent-management-settings.js"></script>
+
+        <script src="/components/07-grievance-and-idea-handling/grievance-idea.js"></script>
+        <script src="/components/07-grievance-and-idea-handling/grievance-idea-route.js"></script>
+        <script src="/components/07-grievance-and-idea-handling/create/create-submissions.js"></script>
+        <script src="/components/07-grievance-and-idea-handling/detail/detail-submissions.js"></script>
+        <script src="/components/07-grievance-and-idea-handling/list/list-submissions.js"></script>
+        <script src="/components/07-grievance-and-idea-handling/settings/grievance-idea-settings.js"></script>
+
+        <script src="/components/08-medical/medical.js"></script>
+        <script src="/components/08-medical/medical-route.js"></script>
+        <script src="/components/08-medical/list/medical-list.js"></script>
+        <script src="/components/08-medical/create/create-medical.js"></script>
+        <script src="/components/08-medical/detail/detail-medical.js"></script>
+        <script src="/components/08-medical/settings/medical-settings.js"></script>
+        <script src="/components/08-medical/settings/medical-groups/medical-groups.js"></script>
+        <script src="/components/08-medical/settings/medical-rules/medical-rules.js"></script>
+        <script src="/components/08-medical/settings/medical-rules/detail/detail-medical-rules.js"></script>
+
+        <script src="/components/09-loan/loan.js"></script>
+        <script src="/components/09-loan/loan-route.js"></script>
+        <script src="/components/09-loan/create/create-loan.js"></script>
+        <script src="/components/09-loan/detail/detail-loan.js"></script>
+        <script src="/components/09-loan/list/loan-list.js"></script>
+        <script src="/components/09-loan/settings/loan-settings.js"></script>
+        <script src="/components/09-loan/payment-detail/payment-detail-loan.js"></script>
+
+        <script src="/components/10-payroll/payroll.js"></script>
+        <script src="/components/10-payroll/payroll-route.js"></script>
+        <script src="/components/10-payroll/create/create-payroll.js"></script>
+        <script src="/components/10-payroll/detail/detail-payroll.js"></script>
+        <script src="/components/10-payroll/list/payroll-list.js"></script>
+        <script src="/components/10-payroll/settings/payroll-settings.js"></script>
+        <script src="/components/10-payroll/settings/allowance/allowance-classification.js"></script>
+
+        <script src="/components/99-authentication/login/login.js"></script>
+        <script src="/components/99-authentication/lock/lock.js"></script>
+        <!-- endbuild -->
+
+      <!-- build:js /scripts/temp.js -->
+      <script src="/layout/theme/plugins/jquery.sparkline.min.js"></script>
+      <script src="/layout/theme/plugins/index3.js"></script>
+      <script src="/layout/theme/plugins/tasks.js"></script>
+      <script src="/layout/theme/plugins/form-samples.js"></script>
+      <!-- endbuild -->
+
+</body>
+</html>

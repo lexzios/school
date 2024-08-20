@@ -1,0 +1,186 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Training <small>Requisition</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.training.path}}">Training</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Requisition</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Create Training Requisition</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Requested By</label>
+						<input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Department</label>
+						<input type="text" id="lastName" class="form-control" placeholder="Lim">
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+			<!--/row-->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+
+						<label class="control-label">Position<span class="required"> *</span></label>
+						<div class="input-group">
+							<select class="form-control select2me" data-placeholder="Select...">
+								<option value="AL">Position 1</option>
+								<option value="WY">Position 2</option>
+							</select>
+						</div>
+
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Date of Request</label>
+						<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+			<!--/row-->
+
+			<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech"></i>
+						<span class="caption-subject bold uppercase"> Tujuan</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech"></i>
+						<span class="caption-subject bold uppercase"> Notes</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea id="maxlength_textarea" class="form-control" placeholder="By T&D Manager" maxlength="225" rows="5"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="portlet light bordered">
+			<div class="portlet-title">
+				<div class="caption">
+					<i class="fa fa-file-text"></i>
+					<span class="caption-subject bold uppercase">Add Attachment</span>
+				</div>
+			</div>
+			<div class="portlet-body">
+				<div class="table-scrollable table-scrollable-borderless">
+					<table class="table table-hover table-light">
+						<thead>
+							<tr class="uppercase">
+								<th width="50%">
+									<strong>Name</strong>
+								</th>
+								<th width="50%">
+									<strong>Size</strong>
+								</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="file in vm.attachment.files" class="ng-scope">
+								<td>
+									<strong>{{file.name}}</strong>
+								</td>
+								<td>
+									<strong>{{vm.ui.formatByte(file.size)}}</strong>
+								</td>
+								<td>
+									<a href="javascript:;" ng-click="vm.attachment.remove(file)" class="btn btn-icon-only grey-cascade">
+										<i class="fa fa-times"></i>
+									</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+
+				<hr>
+
+				<div class="row pull-right" style="padding-right: 10px">
+					<button type="button" class="btn btn-danger btn-s" ng-click="vm.attachment.removeAll()">
+						<span class="glyphicon glyphicon-trash"></span> Remove all
+					</button>
+					<button type="button" class="btn btn-success btn-s" ngf-select ngf-change="vm.attachment.upload($files)"  ngf-multiple="true">
+						<span class="glyphicon glyphicon-plus"></span> Add Attachment
+					</button>
+				</div>
+
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<button type="button" class="btn btn-block default">Cancel</button>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<a href="{{lsprNav.employee.profile.path}}" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Submit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

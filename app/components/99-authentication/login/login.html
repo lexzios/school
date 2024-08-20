@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="col-md-12 page-404">
+		<div class="row" style="margin: 0 auto;max-width:550px">
+			<h1 style="color: #fff">London School of Public Relations</h3>
+			<div class="number col-xs-4">
+				 <img src="/layout/theme/img/logo/logo.png" width="150px" height="150px">
+			</div>
+			<div class="pull-left col-xs-8">
+					<div class="form-body">
+						<div class="form-group">
+							<div class="input-group margin-top-10">
+								<span class="input-group-addon hidden-xs">
+								<i class="icon-envelope"></i>
+								</span>
+								<input type="text" class="form-control" ng-model="vm.nik" placeholder="Type Email">
+							</div>
+							<div class="input-group margin-top-10">
+								<span class="input-group-addon hidden-xs">
+								<i class="icon-lock"></i>
+								</span>
+								<input type="password" class="form-control" ng-model="vm.password" placeholder="Type Password">
+							</div>
+							<hr>
+						</div>
+					</div>
+					<div class="form-actions">
+						<div class="pull-left forget-password-block">
+							<i>
+								<small>
+									<a href="javascript:;" id="forget-password" style="color: #fff" class="forget-password">Forgot Password?</a>
+								</small>
+							</i>
+						</div>
+						<button ng-click="vm.authenticate()" class="btn btn-lg blue pull-right">
+							Login <i class="fa fa-sign-in"></i>
+						</button>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>

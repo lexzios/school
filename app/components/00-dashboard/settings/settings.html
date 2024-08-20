@@ -1,0 +1,180 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	 Company Settings
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Settings</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+<hr>
+<a href="{{lsprNav.dashboard.settingsJobPosition.path}}" class="btn btn-block grey-cascade">
+	<i class="fa fa-plus"></i> Job Position
+</a>
+<hr>
+<div class="clearfix">
+	<div class="btn-group btn-group-justified">
+		<a class="btn grey-cascade" data-ng-repeat="tab in vm.ui.tab.items" ng-click="vm.ui.tab.toggle(tab.name)">
+			{{tab.name}}
+		</a>
+	</div>
+</div>
+<hr>
+
+<div collapse="vm.ui.tab.items[0].collapsed">
+	<div class="portlet light bg-inverse">
+	    <div class="portlet-title">
+	        <div class="caption font-red">
+	            <i class="fa fa-list font-red"></i> Department
+	        </div>
+	    </div>
+	    <div class="portlet-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Department Name</label>
+						<input type="text" class="form-control" placeholder="Type department name" ng-model="vm.dep_name">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Location</label>
+						<select class="form-control select2me">
+							<option value="AL">Campus A</option>
+							<option value="AL">Campus B</option>
+							<option value="AL">Campus C</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<button ng-click="vm.departmentData.add()" class="btn btn-block blue">
+				<i class="fa fa-plus"></i> Save
+			</button>
+			<hr>
+			<div class="table-responsive">
+				<table ng-table="vm.ui.tableDepartmentParams" class="table table-striped table-bordered table-hover no-footer" show-filter="false">
+					<tr ng-repeat="data in vm.departmentData">
+						<td data-title="'Department'" filter="{ 'department': 'text' }" sortable="'department'">
+							{{data.department}}
+						</td>
+						<td data-title="'Location'" filter="{ 'location': 'text' }" sortable="'location'">
+							{{data.location}}
+						</td>
+					</tr>
+				</table>
+			</div>
+	    </div>
+	</div>
+</div>
+
+<div collapse="vm.ui.tab.items[1].collapsed">
+	<div class="portlet box red">
+	    <div class="portlet-title">
+	        <div class="caption">
+	            <i class="fa fa-list"></i> Location
+	        </div>
+	    </div>
+	    <div class="portlet-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Location Name</label>
+						<input type="text" class="form-control" placeholder="Type location name" ng-model="vm.loc_name">
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Address</label>
+						<textarea row="5" ng-model="vm.address" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+			<button ng-click="vm.location.add()" class="btn btn-block blue">
+				<i class="fa fa-save"></i> Save
+			</button>
+			<hr>
+			<table ng-table="vm.ui.tableLocationParams" class="table table-striped table-bordered table-hover dataTable no-footer" show-filter="false">
+				<tr ng-repeat="data in vm.locationData">
+					<td data-title="'Location'" filter="{ 'location': 'text' }" sortable="'location'">
+						{{data.location}}
+					</td>
+					<td data-title="'Address'" filter="{ 'address': 'text' }" sortable="'address'">
+						{{data.address}}
+					</td>
+				</tr>
+			</table>
+	    </div>
+	</div>
+</div>
+
+<div collapse="vm.ui.tab.items[2].collapsed">
+	<div class="portlet box red">
+	    <div class="portlet-title">
+	        <div class="caption">
+	            <i class="fa fa-list"></i> Job Classification
+	        </div>
+	    </div>
+	    <div class="portlet-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Class Name</label>
+						<input type="text" class="form-control" placeholder="Type classification name" ng-model="vm.class">
+					</div>
+				</div>
+			</div>
+			<button ng-click="vm.jobClassification.add()" class="btn btn-block blue">
+				<i class="fa fa-save"></i> Save
+			</button>
+			<hr>
+			<table ng-table="vm.ui.tableClassificationParams" class="table table-striped table-bordered table-hover dataTable no-footer" show-filter="false">
+				<tr ng-repeat="data in vm.classificationData">
+					<td data-title="'Classification'" filter="{ 'classification': 'text' }" sortable="'classification'">
+						{{data.classification}}
+					</td>
+				</tr>
+			</table>
+	    </div>
+	</div>
+</div>
+
+<div collapse="vm.ui.tab.items[3].collapsed">
+	<div class="portlet box red">
+	    <div class="portlet-title">
+	        <div class="caption">
+	            <i class="fa fa-list"></i> Job Level
+	        </div>
+	    </div>
+	    <div class="portlet-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Class Name</label>
+						<input type="text" class="form-control" placeholder="Type level" ng-model="vm.level">
+					</div>
+				</div>
+			</div>
+			<button ng-click="vm.jobLevel.add()" class="btn btn-block blue">
+				<i class="fa fa-save"></i> Save
+			</button>
+			<hr>
+			<table ng-table="vm.ui.tableLevelParams" class="table table-striped table-bordered table-hover dataTable no-footer" show-filter="false">
+				<tr ng-repeat="data in vm.levelData">
+					<td data-title="'Level'" filter="{ 'level': 'text' }" sortable="'level'">
+						{{data.level}}
+					</td>
+				</tr>
+			</table>
+	    </div>
+	</div>
+</div>

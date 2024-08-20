@@ -1,0 +1,188 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Employee Exit <small>Edit</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.employee.path}}">Employee</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.employee.exit.path}}">Exit</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">EX00051</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<hr>
+
+<div class="clearfix"></div>
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Employee Exit Requisition</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+
+			<div class="portlet light">
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Employee Name</label>
+								<input  type="text" id="firstName" class="form-control" placeholder="John Doe">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Employee ID</label>
+								<input  type="text" id="lastName" class="form-control" placeholder="114-254-112-665">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Department</label>
+								<input  type="text" class="form-control" placeholder="Finance">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Position</label>
+								<input  type="text" id="lastName" class="form-control" placeholder="Internal Auditor">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Request Date</label>
+								<input  type="text" class="form-control" placeholder="21/02/2015">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Status</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="New">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+				</div>
+			</div>
+			<!--/row-->
+
+			<div class="portlet light bordered">
+			  <div class="portlet-title">
+			    <div class="caption">
+			      <i class="fa fa-file-text font-red-sunglo"></i>
+			      <span class="caption-subject font-red-sunglo bold uppercase">Attachments</span>
+			    </div>
+			  </div>
+			  <div class="portlet-body">
+			    <div class="table-scrollable table-scrollable-borderless">
+			      <table class="table table-hover table-light">
+			        <thead>
+			          <tr class="uppercase">
+			            <th width="50%">
+			              <strong>Name</strong>
+			            </th>
+			            <th width="50%">
+			              <strong>Size</strong>
+			            </th>
+			          </tr>
+			        </thead>
+			        <tbody>
+			          <tr ng-repeat="file in vm.attachment.files" class="ng-scope">
+			            <td>
+			              <strong>{{file.name}}</strong>
+			            </td>
+			            <td>
+			              <strong>{{vm.ui.formatByte(file.size)}}</strong>
+			            </td>
+
+			          </tr>
+			        </tbody>
+			      </table>
+			    </div>
+
+				<hr>
+
+			    <div class="clearfix"></div>
+			  </div>
+			</div>
+
+			<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech font-red-sunglo"></i>
+						<span class="caption-subject font-red-sunglo bold uppercase">Approval</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+			          <div class="col-md-6">
+			            <div class="form-group">
+			              <label class="control-label">HRD Approval<span class="required"> *</span></label>
+			            </div>
+			          </div>
+			          <div class="col-md-6">
+			            <div class="form-group">
+			              <select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+			                    <option value="Category 1">Accept</option>
+			                    <option value="Category 2">Decline</option>
+			              </select>
+			            </div>
+			          </div>
+			        </div>
+					<div class="row">
+			          <div class="col-md-12">
+			            <div class="form-group">
+			              <textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Notes by HRD"></textarea>
+			            </div>
+			          </div>
+			        </div>
+					<div class="row">
+						<div class="col-md-12">
+							<a href="/employee/EX00051/exit/checklist" class="btn red btn-default btn-block">
+    							<div>Exit Checklist</div>
+    						</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-6">
+					<button type="button" class="btn default btn-block">Cancel</button>
+				</div>
+				<div class="col-md-6">
+					<a href="/employee/exit" type="submit" class="btn blue btn-block"><i class="fa fa-check"></i> Submit</a>
+				</div>
+			</div>
+
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

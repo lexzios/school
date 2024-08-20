@@ -1,0 +1,81 @@
+<h3 class="page-title">
+	 Performance Appraisal <small>Settings</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.performanceAppraisal.path}}">Performance Appraisal</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Settings</a>
+		</li>
+	</ul>
+</div>
+
+<hr>
+
+<div class="portlet box red-sunglo ng-scope">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-cogs"></i>Settings
+		</div>
+	</div>
+	<div class="portlet-body">
+		 <accordion close-others="false">
+			<accordion-group heading="Managerial Appraisal Checklist" is-open="true">
+				<div class="row" ng-repeat="row in vm.managerialRows track by $index">
+					<div class="col-md-6">
+						<input type="text" id="checklistItemName" class="form-control" placeholder="Enter checklist item">
+					</div>
+                    <div class="col-md-5">
+						<input type="text" id="checklistItemCategory" class="form-control" placeholder="Enter checklist category">
+					</div>
+					<div class="col-md-1">
+						<a href="javascript:;" ng-click="vm.ui.removeRow(vm.managerialRows, $index)" class="btn btn-icon-only grey-cascade">
+							<i class="fa fa-times"></i>
+						</a>
+					</div>
+					<hr>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="javascript:;" class="btn btn-block red-sunglo" ng-click="vm.ui.addRow(vm.managerialRows)">
+							<i class="fa fa-plus"></i> Add Checklist
+						</a>
+					</div>
+				</div>
+			</accordion-group>
+		 </accordion>
+         <accordion close-others="false">
+			<accordion-group heading="Employee Appraisal Checklist" is-open="true">
+				<div class="row" ng-repeat="row in vm.employeeRows track by $index">
+					<div class="col-md-6">
+						<input type="text" id="checklistItemName" class="form-control" placeholder="Enter checklist item">
+					</div>
+                    <div class="col-md-5">
+						<input type="text" id="checklistItemCategory" class="form-control" placeholder="Enter checklist category">
+					</div>
+					<div class="col-md-1">
+						<a href="javascript:;" ng-click="vm.ui.removeRow(vm.employeeRows, $index)" class="btn btn-icon-only grey-cascade">
+							<i class="fa fa-times"></i>
+						</a>
+					</div>
+					<hr>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="javascript:;" class="btn btn-block red-sunglo" ng-click="vm.ui.addRow(vm.employeeRows)">
+							<i class="fa fa-plus"></i> Add Checklist
+						</a>
+					</div>
+				</div>
+			</accordion-group>
+		 </accordion>
+	</div>
+</div>

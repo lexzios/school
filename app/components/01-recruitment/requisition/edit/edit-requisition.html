@@ -1,0 +1,284 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Requisition <small>Edit</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.path}}">Recruitment</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="/recruitment/requisition">Requisition</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Edit</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Edit Employee Requisition</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Requested By</label>
+							<input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Department</label>
+							<input type="text" id="lastName" class="form-control" placeholder="Lim">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Date of Request</label>
+							<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Close Date</label>
+							<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Position</label>
+							<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+								<option value="Category 1">Position 1</option>
+								<option value="Category 2">Position 2</option>
+								<option value="Category 3">Position 5</option>
+								<option value="Category 4">Position 4</option>
+							</select>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Reason</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-12 ">
+								<div class="form-group">
+									<label class="control-label">Reason for Request</label>
+									<div class="md-checkbox-inline">
+										<div class="md-checkbox">
+											<input type="checkbox" id="checkbox6" ng-model="vm.requisitionForm.new"  class="md-check">
+											<label for="checkbox6">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											New </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="checkbox7" ng-model="vm.requisitionForm.replacement" class="md-check" checked>
+											<label for="checkbox7">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Replacement </label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row" ng-show="vm.requisitionForm.replacement">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="control-label">Employee Name</label>
+									<input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Hard Skills</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="md-checkbox-inline">
+										<div class="md-checkbox">
+											<input type="checkbox" id="hard-skill-computer" class="md-check">
+											<label for="hard-skill-computer">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Computer </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="hard-skill-accounting"class="md-check" checked>
+											<label for="hard-skill-accounting">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Accounting </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="hard-skill-language" class="md-check" checked>
+											<label for="hard-skill-language">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Language </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="hard-skill-etc" ng-model="vm.requisitionForm.hardSkills.etc" class="md-check" checked>
+											<label for="hard-skill-etc">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											etc </label>
+										</div>
+									</div>
+									<input type="text" id="firstName" class="form-control" placeholder="Enter knowledge & Skills" ng-show="vm.requisitionForm.hardSkills.etc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Soft Skills</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<div class="md-checkbox-inline">
+										<div class="md-checkbox">
+											<input type="checkbox" id="soft-skill-interpersonal" class="md-check">
+											<label for="soft-skill-interpersonal">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Interpersonal </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="soft-skill-intrapersonal"class="md-check" checked>
+											<label for="soft-skill-intrapersonal">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											Intrapersonal </label>
+										</div>
+										<div class="md-checkbox">
+											<input type="checkbox" id="soft-skill-etc" ng-model="vm.requisitionForm.softSkills.etc" class="md-check" checked>
+											<label for="soft-skill-etc">
+											<span></span>
+											<span class="check"></span>
+											<span class="box"></span>
+											etc </label>
+										</div>
+									</div>
+									<input type="text" id="firstName" class="form-control" placeholder="Enter knowledge & Skills" ng-show="vm.requisitionForm.softSkills.etc">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Requirement</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Relevant Working Experience</label>
+									<input type="text" id="firstName" class="form-control" placeholder="Enter Relevant Working Experience">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Min. Level of Education</label>
+									<input type="text" id="firstName" class="form-control" placeholder="Enter Min. Level of Education">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>Fields of Study (for Lecturer)</label>
+									<input type="text" id="firstName" class="form-control" placeholder="Enter Field of Study">
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Main Responsibilities</label>
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Main Responsibilities"></textarea>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label>Special Qualification</label>
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Special Qualification"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="form-actions right">
+				<button type="button" class="btn default">Cancel</button>
+				<a href="/recruitment/requisition/RHR00004" type="submit" class="btn blue"><i class="fa fa-check"></i> Update</a>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

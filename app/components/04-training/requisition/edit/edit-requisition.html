@@ -1,0 +1,136 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	 Training <small>Requisition</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.training.path}}">Training</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Requisition</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Training Requisition</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="/training/list" class="horizontal-form">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Requested By</label>
+							<input type="text" id="firstName" class="form-control" placeholder="Chee Kin">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Department</label>
+							<input type="text" id="lastName" class="form-control" placeholder="Lim">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+
+							<label class="control-label">Position<span class="required"> *</span></label>
+							<div class="input-group">
+								<select class="form-control select2me" data-placeholder="Select...">
+									<option value="AL">Position 1</option>
+									<option value="WY">Position 2</option>
+								</select>
+							</div>
+
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Date of Request</label>
+							<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Tujuan</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Notes</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label">Status<span class="required"> *</span></label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+												<option value="Category 1">Accept</option>
+												<option value="Category 2">Decline</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Notes"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="form-actions right">
+				<button type="button" class="btn default">Cancel</button>
+				<button type="submit" class="btn blue"><i class="fa fa-save"></i> Submit</button>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

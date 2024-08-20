@@ -1,0 +1,111 @@
+/* Fallback style */
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+/* angular-animate configuration */
+
+.ng-hide-remove {
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s;
+}
+
+.ng-hide-add {
+  -webkit-animation: fadeOut 0.5s;
+  animation: fadeOut 0.5s;
+  display: block !important;
+}
+
+.main-content.ng-enter  {
+  animation: fadeIn 0.5s both ease-in; z-index: 8888;
+}
+
+.exit-btn {
+  border-left: 2px solid #9995A6;
+  margin-left: 10px;
+  padding-left: 10px;
+  display: inline-block;
+}
+
+.required {
+  font-weight: bold;
+  color: #F3565D;
+}
+
+.time-modal .modal-dialog {
+  top: 100px;
+}
+
+.time-modal .modal-dialog .modal-header {
+  background-color: #333;
+  margin: 0;
+  line-height: 1.42857143;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.time-modal .modal-dialog .modal-footer {
+  background-color: #333;
+  margin: 0;
+  line-height: 1.42857143;
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.42857143px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.score-block {
+  padding: 5px 15px 5px 5px;
+}
+
+.company-header, .company-header strong {
+  vertical-align: bottom;
+}
+
+.nav-tabs.nav-justified > li {
+  padding-bottom: 0 !important;
+}
+.nav-tabs.nav-justified > li > a {
+  margin-left: 2px ;
+  top: 1px;
+  border: none;
+}
+.nav-tabs.nav-justified > li:first-child > a {
+  margin-left: 0;
+}
+.nav-tabs.nav-justified > li > a:link {
+  background: #eee;
+}
+
+.lspr-notification-modal{
+    height: 500px;
+}
+.lspr-notification-modal-content{
+    height: 450px;
+    overflow: auto;
+}
+
+.modal-open {
+    position: fixed;
+    overflow: auto;
+}
+
+.lspr-notification-table{
+    height: 300px;
+    overflow: auto;
+}
+
+.sortable {
+    background-color: #cb5a5e !important;
+    color: #fff !important;
+}

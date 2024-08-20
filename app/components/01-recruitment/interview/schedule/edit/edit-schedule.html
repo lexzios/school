@@ -1,0 +1,141 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	 Interview <small>Schedule</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.path}}">Recruitment</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.interview.path}}">Interview</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.interview.schedule.path}}">Schedule</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Edit</a>
+		</li>
+	</ul>
+
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet box red-sunglo ">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-calendar"></i>Edit Interview Schedule
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+
+		<form action="#" class="form-horizontal form-bordered form-label-stripped">
+			<div class="form-group">
+				<label class="control-label col-md-3">Interview Date</label>
+				<div class="col-md-9">
+					<input type="text" placeholder="dd/mm/yyyy" class="form-control" value="25/05/2015"/>
+				</div>
+			</div>
+			<div class="form-body">
+				<div class="form-group">
+					<label class="control-label col-md-3">Applicant Name</label>
+					<div class="col-md-9">
+						<input type="text" placeholder="Enter applicant name" class="form-control" value="John Doe"/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Requisition ID</label>
+					<div class="col-md-9">
+						<select class="form-control select2_category">
+							<option value="Requisition 1">Requisition 1</option>
+							<option value="Requisition 2">Requisition 2</option>
+							<option value="Requisition 3">Requisition 3</option>
+							<option value="Requisition 4">Requisition 4</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Interviewer</label>
+					<div class="col-md-9">
+						<table class="table">
+							<tbody>
+								<tr ng-repeat="row in vm.rows track by $index">
+									<td>
+										 <input type="text" id="lastName" class="form-control" placeholder="Enter interviewer name">
+									</td>
+									<td>
+										 <a href="javascript:;" ng-click="vm.ui.removeRow($index)" class="btn btn-icon-only grey-cascade">
+											<i class="fa fa-times"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3">
+										<a href="javascript:;" class="btn btn-block red-sunglo" ng-click="vm.ui.addRow()">
+											<i class="fa fa-plus"></i> Add Interviewer
+										</a>
+									</td>
+								</tr>
+							</tfoot>
+						</table>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Invitation Code</label>
+					<div class="col-md-9">
+						<p class="form-control-static">
+							 <a href="#">AD12K6</a>
+						</p>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Applicant Email</label>
+					<div class="col-md-9">
+						<input type="text" placeholder="Enter applicant email" class="form-control" value="john.doe@gmail.com"/>
+						<hr>
+						<div class="md-checkbox" style="margin-top:5px;">
+							<input type="checkbox" id="checkbox1" class="md-check">
+							<label for="checkbox1">
+							<span></span>
+							<span class="check"></span>
+							<span class="box"></span>
+							Send email to applicant </label>
+						</div>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Applicant Phone Number</label>
+					<div class="col-md-9">
+						<input type="text" class="form-control" placeholder="Enter applicant phone number" value="0821-1151-2244">
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-3">Note</label>
+					<div class="col-md-9">
+						<textarea maxlength="225" placeholder="" rows="5" class="form-control"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="form-actions">
+				<div class="row">
+					<div class="col-md-offset-3 col-md-9">
+						<button type="button" class="btn default">Cancel</button>
+						<a href="{{lsprNav.recruitment.interview.path}}" class="btn blue"><i class="fa fa-save"></i> Save</a>
+					</div>
+				</div>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

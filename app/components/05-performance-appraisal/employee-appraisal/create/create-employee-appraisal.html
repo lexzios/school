@@ -1,0 +1,841 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	 Employee Appraisal <small>Create</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.performanceAppraisal.path}}">Performance Appraisal</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Create</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Employee</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">NIP</label>
+						<input type="text" id="nip" class="form-control" placeholder="5411123456">
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Employee Name</label>
+						<input type="text" id="name" class="form-control" placeholder="Jane Doe">
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+            <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Position</label>
+						<input type="text" id="position" class="form-control" placeholder="">
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Date Work Commenced</label>
+                        <p class="input-group">
+                          <input type="text" class="form-control" disabled
+                               datepicker-popup="dd-MM-yyyy"
+                               is-open="vm.ui.datePickers.dateWork.isOpen"
+                               ng-click="vm.ui.datePickers.dateWork.valuationDatePickerOpen($event)"
+                               ng-model="vm.ui.datePickers.dateWork.model"
+                               min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+                               show-button-bar="false"
+                               datepicker-options="vm.ui.datePickerConfig.options"/>
+                          <span class="input-group-btn">
+                          <button type="button" class="btn btn-default"
+                                  ng-click="vm.ui.datePickers.dateWork.valuationDatePickerOpen($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                          </span>
+                        </p>
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+            <div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Evaluation Period Date (From)</label>
+                        <p class="input-group">
+                          <input type="text" class="form-control" disabled
+                               datepicker-popup="dd-MM-yyyy"
+                               is-open="vm.ui.datePickers.dateFrom.isOpen"
+                               ng-click="vm.ui.datePickers.dateFrom.valuationDatePickerOpen($event)"
+                               ng-model="vm.ui.datePickers.dateFrom.model"
+                               min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+                               show-button-bar="false"
+                               datepicker-options="vm.ui.datePickerConfig.options"/>
+                          <span class="input-group-btn">
+                          <button type="button" class="btn btn-default"
+                                  ng-click="vm.ui.datePickers.dateFrom.valuationDatePickerOpen($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                          </span>
+                        </p>
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Evaluation Period Date (To)</label>
+                        <p class="input-group">
+                          <input type="text" class="form-control" disabled
+                               datepicker-popup="dd-MM-yyyy"
+                               is-open="vm.ui.datePickers.dateTo.isOpen"
+                               ng-click="vm.ui.datePickers.dateTo.valuationDatePickerOpen($event)"
+                               ng-model="vm.ui.datePickers.dateTo.model"
+                               min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+                               show-button-bar="false"
+                               datepicker-options="vm.ui.datePickerConfig.options"/>
+                          <span class="input-group-btn">
+                          <button type="button" class="btn btn-default"
+                                  ng-click="vm.ui.datePickers.dateTo.valuationDatePickerOpen($event)">
+                            <i class="glyphicon glyphicon-calendar"></i>
+                          </button>
+                          </span>
+                        </p>
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo"> I.A.1. Capability / Skill</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+        <div class="portlet">
+            <div class="portlet-body">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                     #
+                                </th>
+                                <th width="30%">
+                                     Capability / Skill
+                                </th>
+                                <th>
+                                     Good (6)
+                                </th>
+                                <th>
+                                     Average (5)
+                                </th>
+                                <th>
+                                     Poor (4)
+                                </th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td width="5%">
+                                     1
+                                </td>
+                                <td class="col-md-8">
+                                     Basic knowledge and technical knowledge of work (including the procedures, company's policies, etc)
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="5%">
+                                     2
+                                </td>
+                                <td class="col-md-8">
+                                     His/her responsibility for the works is in accordance with the job description.
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="5%">
+                                     3
+                                </td>
+                                <td class="col-md-8">
+                                     Ability to accept constructive critics
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="5%">
+                                     4
+                                </td>
+                                <td class="col-md-8">
+                                     Ability to develop the concepts & ideas
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="5%">
+                                     5
+                                </td>
+                                <td class="col-md-8">
+                                     Ability of analysing
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td width="5%">
+                                     6
+                                </td>
+                                <td class="col-md-8">
+                                     Ability to work systematically
+                                </td>
+                                <td class="col-md-1">
+                                     <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-1" class="md-check">
+                                        <label for="personal-appearance-1">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                     </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-2" class="md-check">
+                                        <label for="personal-appearance-2">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td class="col-md-1">
+                                    <div class="md-checkbox">
+                                        <input type="checkbox" id="personal-appearance-3" class="md-check">
+                                        <label for="personal-appearance-3">
+                                        <span></span>
+                                        <span class="check"></span>
+                                        <span class="box"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td colspan="3">
+                                     Total Score: 70
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo"> I.A.2. Mark with (X) in accordance with the achievements in his/her present position</span>
+		</div>
+	</div>
+    <div class="portlet">
+        <div class="portlet-body">
+            <p><span class="bold">1. Productivity level</span></p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (4)
+                            </div>
+                        </td>
+                        <td>
+                            Besides routine job responsibilities, additional work can be finished on time.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (3)
+                            </div>
+                        </td>
+                        <td>
+                            Routine job responsibilities can be finished on time.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (2)
+                            </div>
+                        </td>
+                        <td>
+                            Unable to finish job responsibilities on time.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="portlet">
+        <div class="portlet-body">
+            <p><span class="bold">2. Achievement of work target in period</span></p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (4)
+                            </div>
+                        </td>
+                        <td>
+                            Achieves target 80% to 100%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (3)
+                            </div>
+                        </td>
+                        <td>
+                            Achieves target 60% to 79%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (2)
+                            </div>
+                        </td>
+                        <td>
+                            Achieves target less than 59%
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="portlet">
+        <div class="portlet-body">
+            <p><span class="bold">3. Carefulness and attention to detailed matters</span></p>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (4)
+                            </div>
+                        </td>
+                        <td>
+                            Care and attention to detail is good and it is not necessary to be re-checked with work accuracy 90%-100%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (3)
+                            </div>
+                        </td>
+                        <td>
+                            Care and attention to detail is sufficient, however his / her work still needs to be rechecked with work accuracy 70%-80%
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="5%">
+                            <div class="md-checkbox">
+                               <input type="checkbox" id="personal-appearance-1" class="md-check">
+                               <label for="personal-appearance-1">
+                               <span></span>
+                               <span class="check"></span>
+                               <span class="box"></span>
+                               </label>
+                               (2)
+                            </div>
+                        </td>
+                        <td>
+                            Care and attention to detail is poor (careless), often makes mistakes and his/her work still needs to be rechecked with work accuracy under 70%
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo"> I.B. Explain the employee's achievements evaluated and the results from the period assessed</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+        <div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder=""></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo"> I.C. Explain the main areas requiring improvement by the employee evaluated (emphasize on present improvement)</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+        <div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder=""></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Evaluation Score</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Total Evaluation</label>
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">II. Employee's Disciplinary</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Absence With Permission</label>
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<label class="control-label">Days</label>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Absence Without Permission</label>
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<label class="control-label">Days</label>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Sick Permission</label>
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<label class="control-label">Days</label>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Average number of total working hours/month</label>
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<label class="control-label">Hours</label>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-md-3">
+					<div class="form-group">
+						<label class="control-label">Overall score for employee's discipline</label>
+					</div>
+				</div>
+                <div class="col-md-1">
+					<div class="form-group">
+						<input type="text" id="totalEvaluation" class="form-control" placeholder="">
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-file-text-o font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo">Add Attachment</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="table-scrollable table-scrollable-borderless">
+			<table class="table table-hover table-light">
+				<thead>
+					<tr class="uppercase">
+						<th width="50%">
+							<strong>Name</strong>
+						</th>
+						<th width="50%">
+							<strong>Size</strong>
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="file in vm.attachment.files" class="ng-scope">
+						<td>
+							<strong>{{file.name}}</strong>
+						</td>
+						<td>
+							<strong>{{vm.ui.formatByte(file.size)}}</strong>
+						</td>
+						<td>
+							<a href="javascript:;" ng-click="vm.attachment.remove(file)" class="btn btn-icon-only grey-cascade">
+								<i class="fa fa-times"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+
+		<hr>
+
+		<div class="row pull-right" style="padding-right: 10px">
+			<button type="button" class="btn btn-danger btn-s" ng-click="vm.attachment.removeAll()">
+			<span class="glyphicon glyphicon-trash"></span> Remove all
+			</button>
+			<button type="button" class="btn btn-success btn-s" ngf-select ngf-change="vm.attachment.upload($files)"  ngf-multiple="true">
+			<span class="glyphicon glyphicon-plus"></span> Add Attachment
+			</button>
+		</div>
+
+		<div class="clearfix"></div>
+
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech font-red-sunglo"></i>
+			<span class="caption-subject bold uppercase font-red-sunglo"> Supervisor Comment</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="row margin-top-10">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Status<span class="required"> *</span></label>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+								<option value="Category 1">Accept</option>
+								<option value="Category 2">Decline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Approval note"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<button type="button" class="btn btn-block default">Cancel</button>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<a href="/performance-appraisal/" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Submit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,390 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Training <small>Internal</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.training.path}}">Training</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.training.internal.path}}">Internal</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Detail</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<hr>
+
+<div class="col-md-12">
+	<div class="row pull-right">
+		<div class="col-md-12">
+			<a href="{{lsprNav.training.internal.evaluation.path}}" class="btn red-sunglo ">
+				<i class="fa fa-check-square-o"></i>
+				<div>Evaluation</div>
+			</a>
+			<a href="{{lsprNav.training.internal.feedback.path}}" class="btn red-sunglo ">
+				<i class="fa fa-comment-o"></i>
+				<div>Feedback</div>
+			</a>
+			<a href="{{lsprNav.training.internal.participant.path}}" class="btn red-sunglo ">
+				<i class="fa fa-users"></i>
+				<div>Participant</div>
+			</a>
+		</div>
+	</div>
+</div>
+
+<div class="clearfix"></div>
+<hr>
+
+<div class="portlet portlet light bg-inverse margin-top-10">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Internal Training</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Subject</label>
+							<input type="text" id="firstName" class="form-control" placeholder="Judul Training">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Trainer</label>
+							<input type="text" id="lastName" class="form-control" placeholder="Penyelenggara">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Venue</label>
+							<textarea rows="8" class="form-control"></textarea>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="form-group">
+							<label class="control-label">Estimated Budget</label>
+							<input type="text" class="form-control" placeholder="IDR.">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Estimated Start Date</label>
+							<p class="input-group">
+				              <input type="text" class="form-control" disabled
+				                   datepicker-popup="dd-MM-yyyy"
+				                   is-open="vm.ui.datePickers.dateStart.isOpen"
+				                   ng-click="vm.ui.datePickers.dateStart.valuationDatePickerOpen($event)"
+				                   ng-model="vm.ui.datePickers.dateStart.model"
+				                   min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+				                   show-button-bar="false"
+				                   datepicker-options="vm.ui.datePickerConfig.options"/>
+				              <span class="input-group-btn">
+				              <button type="button" class="btn btn-default"
+				                      ng-click="vm.ui.datePickers.dateStart.valuationDatePickerOpen($event)">
+				                <i class="glyphicon glyphicon-calendar"></i>
+				              </button>
+			              </span>
+			            </p>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Estimated End Date</label>
+							<p class="input-group">
+				              <input type="text" class="form-control" disabled
+				                   datepicker-popup="dd-MM-yyyy"
+				                   is-open="vm.ui.datePickers.dateEnd.isOpen"
+				                   ng-click="vm.ui.datePickers.dateEnd.valuationDatePickerOpen($event)"
+				                   ng-model="vm.ui.datePickers.dateEnd.model"
+				                   min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+				                   show-button-bar="false"
+				                   datepicker-options="vm.ui.datePickerConfig.options"/>
+				              <span class="input-group-btn">
+				              <button type="button" class="btn btn-default"
+				                      ng-click="vm.ui.datePickers.dateEnd.valuationDatePickerOpen($event)">
+				                <i class="glyphicon glyphicon-calendar"></i>
+				              </button>
+			              </span>
+			            </p>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Level</label>
+							<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+								<option value="Category 1">All</option>
+								<option value="Category 2">Staff</option>
+								<option value="Category 3">Managerial</option>
+								<option value="Category 4">Top Managerial</option>
+							</select>
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Participant</label>
+							<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+								<option value="Category 1">All Staff</option>
+								<option value="Category 2">Maintenance Crew</option>
+								<option value="Category 3">Security</option>
+							</select>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<div class="md-radio-inline">
+								<div class="md-radio">
+									<input type="radio" id="hard-skill" class="md-check" checked>
+									<label for="hard-skill">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									Hard Skill
+									</label>
+								</div>
+								<div class="md-radio">
+									<input type="radio" id="soft-skill" class="md-check">
+									<label for="soft-skill">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									Soft Skill
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="fa fa-file-text"></i>
+							<span class="caption-subject bold uppercase">Add Attachment</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="table-scrollable table-scrollable-borderless">
+							<table class="table table-hover table-light">
+								<thead>
+									<tr class="uppercase">
+										<th width="50%">
+											<strong>Name</strong>
+										</th>
+										<th width="50%">
+											<strong>Size</strong>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="file in vm.request.attachment.files" class="ng-scope">
+										<td>
+											<strong>{{file.name}}</strong>
+										</td>
+										<td>
+											<strong>{{vm.ui.formatByte(file.size)}}</strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="clearfix"></div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase">Topic</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>
+											 #
+										</th>
+										<th width="90%">
+
+										</th>
+										<th>
+											<a href="javascript:;" class="btn btn-icon-only red-sunglo" ng-click="vm.ui.addTopic()">
+												<i class="fa fa-plus"></i>
+											</a>
+										</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr ng-repeat="topic in vm.request.topics track by $index">
+										<td>
+											 {{$index+1}}
+										</td>
+										<td>
+											 <input type="text" class="form-control" placeholder="Customer Service">
+										</td>
+										<td>
+											 <a href="javascript:;" ng-click="vm.ui.removeTopic($index)" class="btn btn-icon-only grey-cascade">
+												<i class="fa fa-times"></i>
+											</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech"></i>
+						<span class="caption-subject bold uppercase">Tujuan</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>
+										 #
+									</th>
+									<th width="90%">
+
+									</th>
+									<th>
+										<a href="javascript:;" class="btn btn-icon-only red-sunglo" ng-click="vm.ui.addObjective()">
+											<i class="fa fa-plus"></i>
+										</a>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="objective in vm.request.objectives track by $index">
+									<td>
+										 {{$index+1}}
+									</td>
+									<td>
+										 <input type="text" class="form-control" placeholder="Menambah wawasan mengenai pelayanan customer">
+									</td>
+									<td>
+										 <a href="javascript:;" ng-click="vm.ui.removeObjective($index)" class="btn btn-icon-only grey-cascade">
+											<i class="fa fa-times"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+
+				<div class="portlet light">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Comment</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="10" placeholder="Enter Comment">
+									</textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="portlet box red">
+					<div class="portlet-title">
+						<div class="caption">
+							<i class="icon-speech"></i>
+							<span class="caption-subject bold uppercase"> Notes</span>
+						</div>
+					</div>
+					<div class="portlet-body">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label class="control-label">Status<span class="required"> *</span></label>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+												<option value="Category 1">Accept</option>
+												<option value="Category 2">Decline</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5"></textarea>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+			<div class="form-actions row">
+				<div class="col-md-6">
+					<button type="button" class="btn default btn-block">Cancel</button>
+				</div>
+				<div class="col-md-6">
+					<a href="{{lsprNav.training.internal.path}}" type="submit" class="btn blue btn-block"><i class="fa fa-check"></i> Submit</a>
+				</div>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

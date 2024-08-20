@@ -1,0 +1,267 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Loan <small>LO00047</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.loan.path}}">Loan</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">LO00047</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Employee Loan Requisition</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+
+			<div class="portlet light">
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Employee Name</label>
+								<input disabled type="text" id="firstName" class="form-control" placeholder="John Doe">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Employee ID</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="114-254-112-665">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Department</label>
+								<input disabled type="text" class="form-control" placeholder="Finance">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Position</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="Internal Auditor">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+						<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Age</label>
+								<input disabled type="text" class="form-control" placeholder="24">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Loan Type</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="Jenis / keperluan pinjaman">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Request Date</label>
+								<input disabled type="text" class="form-control" placeholder="21/02/2015">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Start Date</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="17/05/2014">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label">Amount</label>
+								<input disabled type="text" id="lastName" class="form-control" placeholder="1.500.000 IDR">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--/row-->
+			<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech"></i>
+						<span class="caption-subject bold uppercase">Loan Calculation</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-8">Gaji Bersih</label>
+								<div class="col-md-4">
+									<input disabled type="text" placeholder="5.000.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<blockquote>
+									<small>Potongan-potongan</small>
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3"><i>Angsuran pinjaman yang sedang berjalan</i></label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="1.000.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3"><i>Angsuran pinjaman (bila disetujui)</i></label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="1.500.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3"><i>Potongan Lainnya</i></label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="500.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-20">
+						<div class="col-md-12" style="border-top: dotted 2px #222">
+							<div class="form-group margin-top-20">
+								<label class="control-label col-md-8"><strong>
+								<i>Credit Ratio</i>
+								</strong></label>
+								<div class="col-md-4">
+									<input disabled type="text" placeholder="500.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portlet light">
+			    <div class="portlet-title">
+			      <div class="caption">
+			        <i class="icon-speech"></i>
+			        <span class="caption-subject bold uppercase"> Notes</span>
+			      </div>
+			    </div>
+			    <div class="portlet-body">
+			      <div class="row">
+			        <div class="col-md-6">
+			          <div class="form-group">
+			            <label class="control-label">Personel Manager Approval<span class="required"> *</span></label>
+			          </div>
+			        </div>
+			        <div class="col-md-6">
+			          <div class="form-group">
+			            <select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+			                  <option value="Category 1">Accept</option>
+			                  <option value="Category 2">Decline</option>
+			            </select>
+			          </div>
+			        </div>
+			      </div>
+			      <div class="row">
+			        <div class="col-md-12">
+			          <div class="form-group">
+			            <textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Notes by personel manager"></textarea>
+			          </div>
+			        </div>
+			      </div>
+				  <div class="row">
+					  <div class = "col-md-12">
+						  <a href="{{lsprNav.loan._action.paymentDetail}}" class="btn btn-block red">Payment Detail</a>
+					  </div>
+				  </div>
+			    </div>
+			</div>
+
+			<!--/row-->
+			<div class="portlet light">
+				<div class="portlet-body">
+					<div class="row margin-top-10">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3">Saldo pinjaman lama / sisa jangka waktu pinjaman</label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="1.500.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3">Jumlah pinjaman yang diberikan</label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="1.500.000 IDR" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row margin-top-10">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label col-md-3">Jangka Waktu</label>
+								<div class="col-md-9">
+									<input disabled type="text" placeholder="3___ Bulan" class="form-control">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<button type="button" class="btn default btn-block">Cancel</button>
+				</div>
+				<div class="col-md-6">
+					<a href="/loan/list" type="submit" class="btn blue btn-block"><i class="fa fa-check"></i> Edit</a>
+				</div>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

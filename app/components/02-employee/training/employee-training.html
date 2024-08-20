@@ -1,0 +1,238 @@
+<hr>
+<div class="btn-group btn-group-justified">
+	<a href="{{lsprNav.training.requisition._action.create}}" class="btn grey-cascade">
+		<div>Request Training</div>
+	</a>
+	<a href="{{lsprNav.training.scholarship._action.create}}" class="btn grey-cascade">
+		<div>Request Scholarship</div>
+	</a>
+</div>
+<hr>
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-body">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-actions right">
+					<select class="form-control select2me">
+						<option value="AL">Month - January</option>
+						<option value="WY">Month - February</option>
+						<option value="AL">Month - March</option>
+						<option value="WY">Month - April</option>
+						<option value="AL">Month - May</option>
+						<option value="WY">Month - June</option>
+						<option value="AL">Month - July</option>
+						<option value="WY">Month - August</option>
+						<option value="AL">Month - September</option>
+						<option value="WY">Month - October</option>
+						<option value="AL">Month - November</option>
+						<option value="WY">Month - December</option>
+					</select>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-actions right">
+					<select class="form-control select2me">
+						<option value="AL">Year - 2015</option>
+						<option value="AL">Year - 2016</option>
+						<option value="AL">Year - 2017</option>
+						<option value="AL">Year - 2018</option>
+						<option value="AL">Year - 2019</option>
+						<option value="AL">Year - 2020</option>
+						<option value="AL">Year - 2021</option>
+						<option value="AL">Year - 2022</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-12">
+				<a href="#" type="submit" class="btn btn-block blue"><i class="fa fa-search"></i> Search</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-12">
+		<div class="loader"></div>
+		<div class="result">
+			<div class="portlet box red">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-list"></i>Internal Training
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th width="50%">
+										Subject
+									</th>
+									<th width="25%">
+										Date
+									</th>
+									<th width="25%">
+										Type
+									</th>
+									<th>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										Pelatihan Microsoft Excel
+									</td>
+									<td>
+										02-02-2015
+									</td>
+									<td>
+										Hard Skill
+									</td>
+									<td>
+										<a class="btn btn-xs btn-warning" href="{{lsprNav.training.internal.feedback._action.create}}">Feedback</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Pelatihan Kepemimpinan
+									</td>
+									<td>
+										16-02-2015
+									</td>
+									<td>
+										Soft Skill
+									</td>
+									<td>
+										<a class="btn btn-xs btn-warning" href="{{lsprNav.training.internal.feedback._action.create}}">Feedback</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Pelatihan Public Speaking
+									</td>
+									<td>
+										24-07-2015
+									</td>
+									<td>
+										Soft Skill
+									</td>
+									<td>
+										<a class="btn btn-xs btn-warning" href="{{lsprNav.training.internal.feedback._action.create}}">Feedback</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="portlet box red">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-list"></i>External Training
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th width="50%">
+										Subject
+									</th>
+									<th width="25%">
+										Date
+									</th>
+									<th width="25%">
+										Type
+									</th>
+									<th>
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										Implementing a Microsoft SQL Server 2008 R2 Database
+									</td>
+									<td>
+										02-02-2015
+									</td>
+									<td>
+										Hard Skill
+									</td>
+									<td>
+										<a class="btn btn-xs btn-warning" href="{{lsprNav.training.external.feedback._action.create}}">Feedback</a>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Risk Management Strategy
+									</td>
+									<td>
+										16-02-2015
+									</td>
+									<td>
+										Hard Skill
+									</td>
+									<td>
+										<a class="btn btn-xs btn-warning" href="{{lsprNav.training.external.feedback._action.create}}">Feedback</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="portlet box red">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-list"></i>Scholarship
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>
+										Request Date
+									</th>
+									<th>
+										Tuition Fee
+									</th>
+									<th>
+										University
+									</th>
+									<th>
+										Status
+									</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										21-08-2015
+									</td>
+									<td>
+										IDR 12.500.000
+									</td>
+									<td>
+										London School of Public University
+									</td>
+									<td>
+										<span class="label label-sm label-danger">Approved</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,339 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Employee <small> Change Status</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.employee._action.search}}">Employee</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Change Status</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="clearfix"></div>
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+	<div class="caption">
+		<i class="fa fa-th font-red-sunglo"></i>
+		<span class="caption-subject font-red-sunglo bold uppercase">Employee Status Change</span>
+	</div>
+</div>
+<div class="portlet-body form">
+	<form action="#" class="horizontal-form">
+		<div class="form-body">
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Employee Name</label>
+						<input disabled type="text" id="firstName" class="form-control" placeholder="Jane Doe">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">NIK</label>
+						<input type="text" class="form-control" placeholder="12-456-456">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">TMT</label>
+						<input disabled type="text" id="firstName" class="form-control" placeholder="Jane Doe">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Date</label>
+						<input disabled type="text" id="firstName" class="form-control" placeholder="24/08/2015">
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Change Type</label>
+						<select class="form-control select2me">
+							<option value="AL">Mutasi</option>
+							<option value="WY">Promosi</option>
+							<option value="WY">Demosi</option>
+							<option value="WY">Perubahan Gaji</option>
+							<option value="WY">Perubahan Status Hubungan Kerja</option>
+						</select>
+					</div>
+				</div>
+			</div>
+
+			<div class="portlet light">
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>
+										 #
+									</th>
+									<th>
+										Perubahan
+									</th>
+									<th>
+										Lama
+									</th>
+									<th>
+										Baru
+									</th>
+								</tr>
+								</thead>
+								<tbody>
+								<tr>
+									<td>
+										 1
+									</td>
+									<td>
+										 Lokasi
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Campus</option>
+											<option value="WY">Department</option>
+											<option value="WY">Division</option>
+											<option value="WY">Bisnis Unit</option>
+										</select>
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Campus</option>
+											<option value="WY">Department</option>
+											<option value="WY">Division</option>
+											<option value="WY">Bisnis Unit</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 2
+									</td>
+									<td>
+										 Status Kepegawaian
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Permanen</option>
+											<option value="WY">Bulanan</option>
+											<option value="WY">Kontrak</option>
+											<option value="WY">Harian</option>
+											<option value="WY">Borongan</option>
+										</select>
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Permanen</option>
+											<option value="WY">Bulanan</option>
+											<option value="WY">Kontrak</option>
+											<option value="WY">Harian</option>
+											<option value="WY">Borongan</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 3
+									</td>
+									<td>
+										Golongan
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Exempt (tidak dapat lembur)</option>
+											<option value="WY">Non Exempt (dapat lembur)</option>
+										</select>
+									</td>
+									<td>
+										<select class="form-control select2me">
+											<option value="AL">Exempt (tidak dapat lembur)</option>
+											<option value="WY">Non Exempt (dapat lembur)</option>
+										</select>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 4
+									</td>
+									<td>
+										 Grade
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 5
+									</td>
+									<td>
+										 Jabatan
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 6
+									</td>
+									<td>
+										 Gaji Pokok
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 7
+									</td>
+									<td>
+										 Tunjangan Jabatan
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 8
+									</td>
+									<td>
+										 Tunjangan Fungsional
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 9
+									</td>
+									<td>
+										 Tunjangan Keluarga
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 10
+									</td>
+									<td>
+										 Tunjangan Transportasi
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 11
+									</td>
+									<td>
+										 Tunjangan Perumahan
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 12
+									</td>
+									<td>
+										 Tunjangan lain-lain
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+								<tr style="padding:5px">
+									<td colspan="2" style="font-weight:bold;text-align:center">
+										 Tunjangan lain-lain
+									</td>
+									<td>
+										<span>Rp 0,00</span>
+									</td>
+									<td>
+										<span>Rp 0,00</span>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										 13
+									</td>
+									<td>
+										 Perubahan Top Management Team (TMT)
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+									<td>
+										<input type="text" class="form-control"></input>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			
+		</div>
+	</form>
+
+	<div class="form-actions right">
+		<button type="button" class="btn default">Cancel</button>
+		<a href="{{lsprNav.employee.profile.path}}" type="submit" class="btn blue"><i class="fa fa-check"></i> Submit</a>
+	</div>
+</div>
+</div>

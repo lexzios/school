@@ -1,0 +1,111 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Payroll <small>Report</small>
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{lsprNav.dashboard.path}}">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="{{lsprNav.payroll.path}}">Payroll</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#">Report</a>
+        </li>
+    </ul>
+</div>
+
+
+<!-- <div class="portlet box blue-madison">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-plus"></i> Payroll Report
+        </div>
+    </div>
+    <div class="portlet-body">
+        <div class="table-scrollable table-scrollable-borderless">
+            <table class="table table-hover table-light">
+                <thead>
+                    <tr class="uppercase">
+                        <th width="50%">Name</th>
+                        <th ng-show="uploader.isHTML5">Size</th>
+                        <th ng-show="uploader.isHTML5">Progress</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p>Progress:</p>
+            <div class="progress progress-sm" style="">
+                <div class="progress-bar progress-bar-info" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }" style="width: 0%;"></div>
+            </div>
+        </div>
+                
+        <button type="button" class="btn btn-danger btn-s">
+        <span class="glyphicon glyphicon-trash"></span> Cancel
+        </button>
+    
+        <button type="button" class="btn btn-success btn-s">
+        <span class="glyphicon glyphicon-upload"></span> Upload
+        </button>
+        
+    </div>
+</div> -->
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i> Payroll List
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table ng-table="vm.ui.tableParams" class="table table-striped table-bordered table-hover dataTable no-footer" show-filter="true">
+            <tr ng-repeat="data in vm.data">
+                <td data-title="'Department'" filter="{ 'department': 'text' }" sortable="'department'">
+                    {{data.department}}
+                </td>
+                <td data-title="'Name'" filter="{ 'name': 'text' }" sortable="'name'">
+                    {{data.name}}
+                </td>
+                <td data-title="'NIK'" filter="{ 'nik': 'text' }" sortable="'nik'">
+                    {{data.nik}}
+                </td>
+                <td data-title="'Class'" filter="{ 'classification': 'text' }" sortable="'classification'">
+                    {{data.classification}}
+                </td>
+                <td>
+                    <a href="{{lsprNav.payroll._action.detail}}" class="btn btn-icon-only blue-hoki" tooltips title="View detail">
+                    <i class="fa fa-search"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<div class="portlet light bordered">
+    <div class="portlet-body">
+        <div class="form-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-actions right">
+                        <button type="button" class="btn btn-block default">Cancel</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-actions right">
+                        <a href="{{lsprNav.payroll._action.list}}" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Save</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

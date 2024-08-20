@@ -1,0 +1,94 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Payroll <small>Allowance</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.payroll.path}}">Payroll</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.payroll.settings.path}}">Settings</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Allowance</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet box red ng-scope">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th"></i>Detail Payroll Allowance
+		</div>
+	</div>
+	<div class="portlet-body" style="padding: 20px">
+	 	<div class="form-body">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="form-group">
+						<label class="control-label">Classification</label>
+						<input type="text" class="form-control" placeholder="Manager" disabled>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div class="portlet light bordered margin-top-20">
+				<div class="portlet-title">
+					<div class="input-group input-xlarge pull-right">
+						<input type="text" class="form-control" placeholder="Enter allowance type">
+						<span class="input-group-btn">
+							<a href="javascript:;" class="btn btn-icon-only grey-cascade">
+								<i class="fa fa-trash"></i>
+							</a>
+						</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-responsive">
+						<table class="table table-striped">
+							<tbody>
+								<tr>
+									<td>
+										<input class="form-control" placeholder="Enter amount">
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<a href="#" class="btn btn-block red">
+				<i class="fa fa-plus"></i>
+				 Add Allowance
+			</a></div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<button type="button" class="btn btn-block default">Cancel</button>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<a href="{{lsprNav.medical.settings.path}}" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Save</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

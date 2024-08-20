@@ -1,0 +1,84 @@
+<h3 class="page-title">
+	 Employee <small>Settings</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.employee.path}}">Employee</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Settings</a>
+		</li>
+	</ul>
+</div>
+
+<hr>
+
+<div class="portlet box red-sunglo ng-scope">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-cogs"></i>Settings
+		</div>
+	</div>
+	<div class="portlet-body">
+		 <accordion close-others="false">
+			<accordion-group heading="Employee Exit Checklist" is-open="true">
+				<div class="row" ng-repeat="row in vm.rows track by $index">
+					<div class="col-md-11">
+						<input type="text" id="checklistItemName" class="form-control" placeholder="Enter checklist item">
+					</div>
+					<div class="col-md-1">
+						<a href="javascript:;" ng-click="vm.ui.removeRow($index)" class="btn btn-icon-only grey-cascade">
+							<i class="fa fa-times"></i>
+						</a>
+					</div>
+					<hr>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<a href="javascript:;" class="btn btn-block red-sunglo" ng-click="vm.ui.addRow()">
+							<i class="fa fa-plus"></i> Add Checklist
+						</a>
+					</div>
+				</div>
+			</accordion-group>
+		 </accordion>
+		 <accordion close-others="false">
+			<accordion-group heading="Allowance" is-open="true">
+				<div class="row">
+		          <div class="col-md-2">
+		            <div class="form-group">
+		              <label class="control-label">Max Age For Education Allowance</label>
+		            </div>
+		          </div>
+		          <!--/span-->
+		          <div class="col-md-2">
+		            <div class="form-group">
+		              <input type="text" class="form-control" value="19">
+		            </div>
+		          </div>
+		          <!--/span-->
+		        </div>
+			</accordion-group>
+		 </accordion>
+		 <div class="row">
+           <div class="col-md-6">
+             <div class="form-actions right">
+               <button type="button" class="btn btn-block default">Cancel</button>
+             </div>
+           </div>
+           <div class="col-md-6">
+             <div class="form-actions right">
+               <a href="/attendance/leave-without-pay" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Update</a>
+             </div>
+           </div>
+         </div>
+	</div>
+
+</div>

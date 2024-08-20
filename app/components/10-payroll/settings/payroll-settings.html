@@ -1,0 +1,192 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Payroll <small>Settings</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.payroll.path}}">Payroll</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Settings</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet box red">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-list"></i>Allowances
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="table-responsive">
+			<table class="table">
+			<thead>
+			<tr>
+				<th width="5%">
+					 #
+				</th>
+				<th width="90%">
+					 Classification
+				</th>
+				<th width="5%">
+					 
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					 1
+				</td>
+				<td>
+					 Top Level Management
+				</td>
+				<td>
+					 <a href="{{lsprNav.payroll.settings.allowanceClassification.path}}" class="btn btn-icon-only grey-cascade" tooltips title="View Detail">
+					 	<i class="glyphicon glyphicon-search"></i>
+					 </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 2
+				</td>
+				<td>
+					 Manager
+				</td>
+				<td>
+					 <a href="{{lsprNav.payroll.settings.allowanceClassification.path}}" class="btn btn-icon-only grey-cascade" tooltips title="View Detail">
+					 	<i class="glyphicon glyphicon-search"></i>
+					 </a>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 3
+				</td>
+				<td>
+					 Clerk
+				</td>
+				<td>
+					 <a href="{{lsprNav.payroll.settings.allowanceClassification.path}}" class="btn btn-icon-only grey-cascade" tooltips title="View Detail">
+					 	<i class="glyphicon glyphicon-search"></i>
+					 </a>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="portlet box red">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-list"></i>Other Settings
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="table-responsive">
+			<table class="table">
+			<thead>
+			<tr>
+				<th width="5%">
+					 #
+				</th>
+				<th width="45%">
+					 Component
+				</th>
+				<th width="25%">
+					 Multiplier
+				</th>
+				<th width="25%">
+					 Type
+				</th>
+			</tr>
+			</thead>
+			<tbody>
+			<tr>
+				<td>
+					 1
+				</td>
+				<td>
+					 BPJS Kesehatan
+				</td>
+				<td>
+					 0.04
+				</td>
+				<td>
+					<select class="form-control">
+						<option>Deducation</option>
+						<option>Allowance</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 2
+				</td>
+				<td>
+					 BPJS Ketenagakerjaan (JKK)
+				</td>
+				<td>
+					0.24
+				</td>
+				<td>
+					<select class="form-control">
+						<option>Deducation</option>
+						<option>Allowance</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 3
+				</td>
+				<td>
+					 BPJS Ketenagakerjaan (JHT)
+				</td>
+				<td>
+					0.02
+				</td>
+				<td>
+					<select class="form-control">
+						<option>Deducation</option>
+						<option>Allowance</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					 4
+				</td>
+				<td>
+					 THR
+				</td>
+				<td>
+					1
+				</td>
+				<td>
+					<select class="form-control">
+						<option>Allowance</option>
+						<option>Deducation</option>
+					</select>
+				</td>
+			</tr>
+			</tbody>
+			</table>
+			<a href="#" class="btn btn-block red">
+				<i class="fa fa-plus"></i> Add Other Component
+			</a>
+		</div>
+	</div>
+</div>

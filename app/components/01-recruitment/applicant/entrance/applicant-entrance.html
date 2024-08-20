@@ -1,0 +1,685 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Employee Entrance Checklist <small>A000401</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.path}}">Recruitment</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.applicant.path}}">Applicant</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Employee Entrance Checklist </a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Employee Entrance Check List</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Applicant Name</label>
+							<input disabled type="text" id="firstName" class="form-control" placeholder="Jane Doe">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Start Date</label>
+							<input type="text" id="lastName" class="form-control" placeholder="dd/mm/yyyy">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Employee Type</label>
+							<div class="md-checkbox-inline">
+								<div class="md-checkbox">
+									<input disabled type="checkbox" id="is-normal" class="md-check" ng-checked="!vm.employee.expat">
+									<label for="is-normal">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									Normal
+									</label>
+								</div>
+								<div class="md-checkbox">
+									<input disabled type="checkbox" id="is-expat" class="md-check" ng-checked="vm.employee.expat">
+									<label for="is-expat">
+									<span></span>
+									<span class="check"></span>
+									<span class="box"></span>
+									Expat
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+
+				<div class="portlet">
+					<div class="portlet-body">
+						<div class="table-responsive">
+							<table class="table table-striped">
+								<thead>
+									<tr>
+										<th>
+											 Date
+										</th>
+										<th>
+											 Done
+										</th>
+										<th>
+											 N/A
+										</th>
+										<th>
+											 Task / Item
+										</th>
+										<th>
+											 Note
+										</th>
+									</tr>
+									</thead>
+									<tbody>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="urine-test-done" class="md-check">
+												<label for="urine-test-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="urine-test-na" class="md-check">
+												<label for="urine-test-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Urine Test</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="psikotest-result-done" class="md-check">
+												<label for="psikotest-result-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="psikotest-result-na" class="md-check">
+												<label for="psikotest-result-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Psikotest Result</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="fingerprint-done" class="md-check">
+												<label for="fingerprint-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="fingerprint-na" class="md-check">
+												<label for="fingerprint-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Fingerprint</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="email-done" class="md-check">
+												<label for="email-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="email-na" class="md-check">
+												<label for="email-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">LSPR Email</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="familirization-done" class="md-check">
+												<label for="familirization-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="familirization-na" class="md-check">
+												<label for="familirization-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Familiarization by Department Head</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="employee-book-done" class="md-check">
+												<label for="employee-book-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="employee-book-na" class="md-check">
+												<label for="employee-book-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Employee Bok</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="employment-contract-done" class="md-check">
+												<label for="employment-contract-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="employment-contract-na" class="md-check">
+												<label for="employment-contract-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Employment Contract</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="master-data-done" class="md-check">
+												<label for="master-data-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="master-data-na" class="md-check">
+												<label for="master-data-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Master Data Form</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="cv-done" class="md-check">
+												<label for="cv-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="cv-na" class="md-check">
+												<label for="cv-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Applicant CV</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-ktp-done" class="md-check">
+												<label for="copy-ktp-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-ktp-na" class="md-check">
+												<label for="copy-ktp-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Copy KTP</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-kk-done" class="md-check">
+												<label for="copy-kk-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-kk-na" class="md-check">
+												<label for="copy-kk-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Facilities</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="npwp-done" class="md-check">
+												<label for="npwp-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="npwp-na" class="md-check">
+												<label for="npwp-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">NPWP</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="bpjs-ketenagakerjaan-done" class="md-check">
+												<label for="bpjs-ketenagakerjaan-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="bpjs-ketenagakerjaan-na" class="md-check">
+												<label for="bpjs-ketenagakerjaan-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">BPJS Ketenagakerjaan</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="bpjs-kesehatan-done" class="md-check">
+												<label for="bpjs-kesehatan-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="bpjs-kesehatan-na" class="md-check">
+												<label for="bpjs-kesehatan-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">BPJS Kesehatan</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="latest-diploma-done" class="md-check">
+												<label for="latest-diploma-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="latest-diploma-na" class="md-check">
+												<label for="latest-diploma-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Latest Diploma</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr ng-show="vm.applicant.expat">
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-passport-done" class="md-check">
+												<label for="copy-passport-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="copy-passport-na" class="md-check">
+												<label for="copy-passport-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Copy Passport</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr ng-show="vm.applicant.expat">
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="photo-done" class="md-check">
+												<label for="photo-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="photo-na" class="md-check">
+												<label for="photo-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Photo 4x6 softcopy</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+									<tr ng-show="vm.applicant.expat">
+										<td>
+											<input type="text" class="form-control" placeholder="dd/mm/yyyy">
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="cek-kesehatan-done" class="md-check">
+												<label for="cek-kesehatan-done">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<div class="md-checkbox">
+												<input type="checkbox" id="cek-kesehatan-na" class="md-check">
+												<label for="cek-kesehatan-na">
+												<span></span>
+												<span class="check"></span>
+												<span class="box"></span>
+												</label>
+											</div>
+										</td>
+										<td>
+											<label class="control-label">Cek kesehatan</label>
+										</td>
+										<td>
+											<input type="text" class="form-control" placeholder="Type note here ...">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<a href="#" class="btn btn-block red">
+								<i class="fa fa-plus"></i>
+								 Add More
+							</a>
+							
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<div class="form-actions right">
+				<a href="/recruitment/interview/result/edit/IR0024" type="submit" class="btn blue"><i class="fa fa-check"></i> Update</a>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

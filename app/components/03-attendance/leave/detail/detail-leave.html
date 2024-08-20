@@ -1,0 +1,312 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Leave <small>Request</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.attendance.path}}">Attendance</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.attendance.leave.path}}">Leave</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.attendance.leave._action.create}}">Request</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">AL00051</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">On Leave Request</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Employee Name</label>
+						<input disabled type="text" id="firstName" class="form-control" placeholder="John Doe">
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Employee ID</label>
+						<input disabled type="text" id="lastName" class="form-control" placeholder="345-2144-756">
+					</div>
+				</div>
+				<!--/span-->
+			</div>
+			<!--/row-->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Position</label>
+						<input disabled type="text" id="lastName" class="form-control" placeholder="Internal Auditor">
+					</div>
+				</div>
+				<!--/span-->
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Department</label>
+						<input disabled type="text" class="form-control" placeholder="Finance">
+					</div>
+				</div>
+			</div>
+			<!--/row-->
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Total Days for Leave of Absence</label>
+						<input type="text" class="form-control" placeholder="2">
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Type of Leave</label>
+						<select class="form-control">
+							<option selected>Annual Leave</option>
+							<option>Medical Leave</option>
+							<option>Others</option>
+						</select>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-group">
+						<label class="control-label">Start Date</label>
+						<p class="input-group">
+							<input type="text" class="form-control" disabled
+							datepicker-popup="dd-MM-yyyy"
+							is-open="vm.ui.datePickers.dateStart.isOpen"
+							ng-click="vm.ui.datePickers.dateStart.valuationDatePickerOpen($event)"
+							ng-model="vm.ui.datePickers.dateStart.model"
+							min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+							show-button-bar="false"
+							datepicker-options="vm.ui.datePickerConfig.options"/>
+							<span class="input-group-btn">
+								<button type="button" class="btn btn-default"
+								ng-click="vm.ui.datePickers.dateStart.valuationDatePickerOpen($event)">
+								<i class="glyphicon glyphicon-calendar"></i>
+							</button>
+						</span>
+					</p>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">End Date</label>
+					<p class="input-group">
+						<input type="text" class="form-control" disabled
+						datepicker-popup="dd-MM-yyyy"
+						is-open="vm.ui.datePickers.dateEnd.isOpen"
+						ng-click="vm.ui.datePickers.dateEnd.valuationDatePickerOpen($event)"
+						ng-model="vm.ui.datePickers.dateEnd.model"
+						min-date="vm.ui.datePickerConfig.minDate" max-date="vm.ui.datePickerConfig.maxDate"
+						show-button-bar="false"
+						datepicker-options="vm.ui.datePickerConfig.options"/>
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default"
+							ng-click="vm.ui.datePickers.dateEnd.valuationDatePickerOpen($event)">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</button>
+					</span>
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<label class="control-label">Address and Contact while on Leave</label>
+				<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="3">
+				</textarea>
+			</div>
+		</div>
+		<!--/span-->
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<div class="form-group">
+				<label class="control-label">Reason</label>
+				<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="3">
+				</textarea>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="portlet box blue">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech"></i>
+			<span class="caption-subject bold uppercase"> Personalia Notes</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>
+							 #
+						</th>
+						<th>
+							 
+						</th>
+						<th>
+							Days
+						</th>
+						<th>
+							Notes
+						</th>
+					</tr>
+					</thead>
+					<tbody>
+					<tr>
+						<td>
+							 1
+						</td>
+						<td>
+							 Total Leave Last Year
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="10 Days">
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="-">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							 2
+						</td>
+						<td>
+							 Total Leave This Year
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="0 Days">
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="-">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							 3
+						</td>
+						<td>
+							 Leave That Has Been Used
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="0 Days">
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="-">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							 4
+						</td>
+						<td>
+							 Remaining Leave This Year
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="12 Days">
+						</td>
+						<td>
+							 <input type="text" id="firstName" class="form-control" placeholder="Some example note">
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div class="portlet box red">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech"></i>
+			<span class="caption-subject bold uppercase"> Notes</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Supervisor Approval<span class="required"> *</span></label>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+						<option value="Category 1">Accept</option>
+						<option value="Category 2">Decline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Notes by supervisor"></textarea>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">GM/Programme Director Approval<span class="required"> *</span></label>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="form-group">
+					<select class="select2_category form-control" data-placeholder="Choose a Category" tabindex="1">
+						<option value="Category 1">Accept</option>
+						<option value="Category 2">Decline</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea id="maxlength_textarea" class="form-control" maxlength="225" rows="5" placeholder="Notes by GM/Programme Director"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<button type="button" class="btn default btn-block">Cancel</button>
+	</div>
+	<div class="col-md-6">
+		<a href="/attendance/leave/" type="submit" class="btn blue btn-block"><i class="fa fa-save"></i> Update</a>
+	</div>
+</div>
+</div>
+</div>

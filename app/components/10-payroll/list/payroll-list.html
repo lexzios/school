@@ -1,0 +1,75 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+    Payroll <small>List</small>
+</h3>
+<div class="page-bar">
+    <ul class="page-breadcrumb">
+        <li>
+            <i class="fa fa-home"></i>
+            <a href="{{lsprNav.dashboard.path}}">Home</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="{{lsprNav.payroll.path}}">Payrol</a>
+            <i class="fa fa-angle-right"></i>
+        </li>
+        <li>
+            <a href="#">List</a>
+        </li>
+    </ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<hr>
+	<div class="btn-group btn-group-justified">
+		<a href="{{lsprNav.payroll._action.create}}" class="btn grey-cascade">
+			<div>Generate Payroll Report</div>
+		</a>	
+	</div>
+<hr>
+
+<form action="/training" role="form" class="ng-pristine ng-valid">
+    <div class="row form-group">
+        <div class="col-md-6">
+            <label class="control-label">Subject</label>
+            <div class="input-icon">
+                <i class="fa fa-file"></i>
+                <input class="form-control" type="text" ng-model="vm.search.param">
+            </div>
+        </div>
+    </div>
+    <button class="btn blue-hoki btn-block margin-top-20">SEARCH <i class="m-icon-swapright m-icon-white"></i></button>
+</form>
+
+<hr>
+
+<div class="portlet box red">
+    <div class="portlet-title">
+        <div class="caption">
+            <i class="fa fa-list"></i> Payroll List
+        </div>
+    </div>
+    <div class="portlet-body">
+        <table ng-table="vm.ui.tableParams" class="table table-striped table-bordered table-hover dataTable no-footer" show-filter="true">
+            <tr ng-repeat="data in vm.data">
+                <td data-title="'Department'" sortable="'department'">
+                    {{data.department}}
+                </td>
+                <td data-title="'Name'" sortable="'name'">
+                    {{data.name}}
+                </td>
+                <td data-title="'NIK'" sortable="'nik'">
+                    {{data.nik}}
+                </td>
+                <td data-title="'Class'" sortable="'classification'">
+                    {{data.classification}}
+                </td>
+                <td>
+                    <a href="{{lsprNav.payroll._action.detail}}" class="btn btn-icon-only blue-hoki" tooltips title="View detail">
+                    <i class="fa fa-search"></i>
+                    </a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

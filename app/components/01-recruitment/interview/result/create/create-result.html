@@ -1,0 +1,35 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Interview <small>Result</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.path}}">Recruitment</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.recruitment.interview.path}}">Interview</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Result</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<hr>
+<button class="btn btn-default" ng-repeat="tab in vm.ui.tab.items" ng-click="vm.ui.tab.toggle(tab.name)">
+{{tab.name}}
+</button>
+<hr>
+
+<div ng-repeat="tab in vm.ui.tab.items" collapse="tab.collapsed" class="portlet light bg-inverse">
+	<ng-include src="tab.content"></ng-include>
+</div>

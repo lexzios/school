@@ -1,0 +1,150 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Grievance and Idea Handling <small> Submission</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.grievanceAndIdeaHandling.path}}">Grievance and Idea Handling</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Submission</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="clearfix"></div>
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Create Submission</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+		<form action="#" class="horizontal-form">
+
+			<div class="portlet light">
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="control-label">Subject</label>
+								<input type="text" id="firstName" class="form-control" placeholder="Submission Subject">
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Date</label>
+								<input disabled type="text" class="form-control" placeholder="22/07/2015">
+							</div>
+						</div>
+						<!--/span-->
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="control-label">Type</label>
+								<select class="form-control select2me">
+									<option value="AL">Grievance</option>
+									<option value="WY">Idea</option>
+								</select>
+							</div>
+						</div>
+						<!--/span-->
+					</div>
+				</div>
+			</div>
+			<!--/row-->
+
+			<div class="portlet light">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="icon-speech"></i>
+						<span class="caption-subject bold uppercase">Concern</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row">
+						<div class="col-md-12">
+							<div class="form-group">
+								<textarea rows="10" class="form-control" placeholder="Type your concern here"></textarea>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="portlet light bordered">
+				<div class="portlet-title">
+					<div class="caption">
+						<i class="fa fa-file-text"></i>
+						<span class="caption-subject bold uppercase">Add Attachment</span>
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="table-scrollable table-scrollable-borderless">
+						<table class="table table-hover table-light">
+							<thead>
+								<tr class="uppercase">
+									<th width="50%">
+										<strong>Name</strong>
+									</th>
+									<th width="50%">
+										<strong>Size</strong>
+									</th>
+									<th></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="file in vm.attachment.files" class="ng-scope">
+									<td>
+										<strong>{{file.name}}</strong>
+									</td>
+									<td>
+										<strong>{{vm.ui.formatByte(file.size)}}</strong>
+									</td>
+									<td>
+										<a href="javascript:;" ng-click="vm.attachment.remove(file)" class="btn btn-icon-only grey-cascade">
+											<i class="fa fa-times"></i>
+										</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<hr>
+
+					<div class="row pull-right" style="padding-right: 10px">
+						<button type="button" class="btn btn-danger btn-s" ng-click="vm.attachment.removeAll()">
+						<span class="glyphicon glyphicon-trash"></span> Remove all
+						</button>
+						<button type="button" class="btn btn-success btn-s" ngf-select ngf-change="vm.attachment.upload($files)"  ngf-multiple="true">
+						<span class="glyphicon glyphicon-plus"></span> Add Attachment
+						</button>
+					</div>
+
+					<div class="clearfix"></div>
+				</div>
+			</div>
+
+							
+			<div class="form-actions right">
+				<button type="button" class="btn default">Cancel</button>
+				<a href="{{lsprNav.grievanceAndIdeaHandling.path}}" type="submit" class="btn blue"><i class="fa fa-save"></i> Submit</a>
+			</div>
+		</form>
+		<!-- END FORM-->
+	</div>
+</div>

@@ -1,0 +1,179 @@
+<div class="page-sidebar navbar-collapse collapse">
+	<!-- BEGIN SIDEBAR MENU -->
+	<!-- DOC: Apply "page-sidebar-menu-light" class right after "page-sidebar-menu" to enable light sidebar menu style(without borders) -->
+	<!-- DOC: Apply "page-sidebar-menu-hover-submenu" class right after "page-sidebar-menu" to enable hoverable(hover vs accordion) sub menu mode -->
+	<!-- DOC: Apply "page-sidebar-menu-closed" class right after "page-sidebar-menu" to collapse("page-sidebar-closed" class must be applied to the body element) the sidebar sub menu mode -->
+	<!-- DOC: Set data-auto-scroll="false" to disable the sidebar from auto scrolling/focusing -->
+	<!-- DOC: Set data-keep-expand="true" to keep the submenues expanded -->
+	<!-- DOC: Set data-auto-speed="200" to adjust the sub menu slide up/down speed -->
+	<ul class="page-sidebar-menu page-sidebar-menu-hover-submenu" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200" ng-class="{'page-sidebar-menu-closed': layout.pageSidebarClosed}">
+		<li class="start" style="border-top:5px solid #d64635" ng-class="vm.isActive(lsprNav.DASHBOARD) ? 'active open' : ''">
+			<a href="{{lsprNav.dashboard.path}}">
+				<i class="icon-home"></i>
+				<span class="title">Dashboard</span>
+			</a>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.recruitment.path) ? 'active open' : ''">
+			<a href="{{lsprNav.recruitment.path}}">
+				<i class="icon-user-follow"></i>
+				<span class="title">Recruitment</span>
+				<span class="arrow"></span>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="{{lsprNav.recruitment.requisition.path}}">
+						Requisition
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.recruitment.interview.path}}">
+						Interview
+						<span class="arrow"></span>
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.recruitment.applicant.path}}">
+						Applicant
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.employee.path) ? 'active open' : ''">
+			<a href="{{lsprNav.employee.path}}">
+				<i class="icon-users"></i>
+				<span class="title">Employee</span>
+				<span class="arrow"></span>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="{{lsprNav.employee.allowance._action.list}}">
+						Allowance
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.employee.noticeLetter.path}}">
+						Notice Letter
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.employee.exit.path}}">
+						Employee Exit
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.attendance.path) ? 'active open' : ''">
+			<a href="{{lsprNav.attendance.path}}">
+			<i class="icon-clock"></i>
+			<span class="title">Attendance</span>
+			<span class="arrow "></span>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="{{lsprNav.attendance.time.path}}">
+						Time
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.attendance.leave.path}}">
+						Leave
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.attendance.workLeavePermission.path}}">
+						Work Leave
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.attendance.permission.path}}">
+						Attendance Permission
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.attendance.leaveWithoutPay.path}}">
+						Leave Without Pay
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.training.path) ? 'active open' : ''">
+			<a href="{{lsprNav.training.path}}">
+			<i class="icon-book-open"></i>
+			<span class="title">Training</span>
+			<span class="arrow "></span>
+			</a>
+			<ul class="sub-menu">
+				<li>
+					<a href="{{lsprNav.training.internal.path}}">
+						Internal
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.training.external.path}}">
+						External
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.training.requisition.path}}">
+						Requisition
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.training.scholarship.path}}">
+						Scholarship
+					</a>
+				</li>
+				<li>
+					<a href="{{lsprNav.training.businessTrip.path}}">
+						Business Trip
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.performanceAppraisal.path) ? 'active open' : ''">
+			<a href="{{lsprNav.performanceAppraisal.path}}">
+				<i class="icon-trophy"></i>
+				<span class="title">Performance Appraisal</span>
+			</a>
+	</li>
+		<li ng-class="vm.isActive(lsprNav.talentManagement.path) ? 'active open' : ''">
+			<a href="{{lsprNav.talentManagement.path}}">
+				<i class="icon-badge"></i>
+				<span class="title">Talent Management</span>
+			</a>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.grievanceAndIdeaHandling.path) ? 'active open' : ''">
+			<a href="{{lsprNav.grievanceAndIdeaHandling.path}}">
+				<i class="icon-envelope"></i>
+				<span class="title">Grievance & Idea</span>
+			</a>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.medical.path) ? 'active open' : ''">
+			<a href="{{lsprNav.medical.path}}">
+				<i class="icon-chemistry"></i>
+				<span class="title">Medical</span>
+			</a>
+		</li>
+		<li ng-class="vm.isActive(lsprNav.loan.path) ? 'active open' : ''">
+			<a href="{{lsprNav.loan.path}}">
+				<i class="icon-wallet"></i>
+				<span class="title">Loan</span>
+			</a>
+			<!-- <ul class="sub-menu">
+				<li>
+					<a href="{{lsprNav.loan._action.list}}">
+						List
+						<span class="arrow"></span>
+					</a>
+				</li>
+			</ul> -->
+		</li>
+		<li ng-class="vm.isActive(lsprNav.payroll.path) ? 'active open' : ''">
+			<a href="{{lsprNav.payroll.path}}">
+			<i class="icon-calendar"></i>
+			<span class="title">Payroll</span>
+			</a>
+		</li>
+	</ul>
+	<!-- END SIDEBAR MENU -->
+</div>

@@ -1,0 +1,225 @@
+<!-- BEGIN PAGE HEADER-->
+<h3 class="page-title">
+	Permission <small>Request</small>
+</h3>
+<div class="page-bar">
+	<ul class="page-breadcrumb">
+		<li>
+			<i class="fa fa-home"></i>
+			<a href="{{lsprNav.dashboard.path}}">Home</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.attendance.path}}">Attendance</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="{{lsprNav.attendance.permission.path}}">Permission</a>
+			<i class="fa fa-angle-right"></i>
+		</li>
+		<li>
+			<a href="#">Request</a>
+		</li>
+	</ul>
+</div>
+<!-- END PAGE HEADER-->
+
+<div class="portlet light bg-inverse">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-th font-red-sunglo"></i>
+			<span class="caption-subject font-red-sunglo bold uppercase">Attendance Permission Request</span>
+		</div>
+	</div>
+	<div class="portlet-body form">
+		<!-- BEGIN FORM-->
+			<div class="form-body">
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">For Date</label>
+							<input type="text" disabled class="form-control" placeholder="07-09-2015">
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Employee Name</label>
+							<input type="text" disabled class="form-control" placeholder="John Doe">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">NIK</label>
+							<input type="text" disabled class="form-control" placeholder="345-2144-756">
+						</div>
+					</div>
+					<!--/span-->
+				</div>
+				<!--/row-->
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Position</label>
+							<input type="text" disabled class="form-control" placeholder="Internal Auditor">
+						</div>
+					</div>
+					<!--/span-->
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Department</label>
+							<input type="text" disabled class="form-control" placeholder="Finance">
+						</div>
+					</div>
+				</div>
+				<!--/row-->
+
+			</div>
+
+		
+	</div>
+</div>
+
+
+<div class="portlet light">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="icon-speech"></i>
+			<span class="caption-subject bold uppercase">Request Note</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="row">
+			<div class="col-md-6 col-lg-3">
+				<div class="md-checkbox">
+					<input type="checkbox" id="checkbox1" class="md-check">
+					<label for="checkbox1">
+					<span></span>
+					<span class="check"></span>
+					<span class="box"></span>
+					Terlambat masuk kerja </label>
+				</div>
+			</div>
+			<div class="col-md-6  col-lg-3">
+				<div class="md-checkbox">
+					<input type="checkbox" id="checkbox2" class="md-check">
+					<label for="checkbox2">
+					<span></span>
+					<span class="check"></span>
+					<span class="box"></span>
+					Sakit </label>
+				</div>
+			</div>
+			<div class="col-md-6  col-lg-3">
+				<div class="md-checkbox">
+					<input type="checkbox" id="checkbox3" class="md-check">
+					<label for="checkbox3">
+					<span></span>
+					<span class="check"></span>
+					<span class="box"></span>
+					Pulang lebih awal </label>
+				</div>
+			</div>
+			<div class="col-md-6  col-lg-3">
+				<div class="md-checkbox">
+					<input type="checkbox" id="checkbox4" class="md-check" checked>
+					<label for="checkbox4">
+					<span></span>
+					<span class="check"></span>
+					<span class="box"></span>
+					Lain-lain </label>
+				</div>	
+			</div>
+		</div>
+		<hr>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="control-label">Reason</label>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<div class="form-group">
+					<textarea class="form-control" maxlength="225" rows="5" placeholder="Enter request note"></textarea>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-title">
+		<div class="caption">
+			<i class="fa fa-file-text"></i>
+			<span class="caption-subject bold uppercase">Add Attachment</span>
+		</div>
+	</div>
+	<div class="portlet-body">
+		<div class="table-scrollable table-scrollable-borderless">
+			<table class="table table-hover table-light">
+				<thead>
+					<tr class="uppercase">
+						<th width="50%">
+							<strong>Name</strong>
+						</th>
+						<th width="50%">
+							<strong>Size</strong>
+						</th>
+						<th></th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="file in vm.attachment.files" class="ng-scope">
+						<td>
+							<strong>{{file.name}}</strong>
+						</td>
+						<td>
+							<strong>{{vm.ui.formatByte(file.size)}}</strong>
+						</td>
+						<td>
+							<a href="javascript:;" ng-click="vm.attachment.remove(file)" class="btn btn-icon-only grey-cascade">
+								<i class="fa fa-times"></i>
+							</a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<hr>
+
+		<div class="row pull-right" style="padding-right: 10px">
+			<button type="button" class="btn btn-danger btn-s" ng-click="vm.attachment.removeAll()">
+			<span class="glyphicon glyphicon-trash"></span> Remove all
+			</button>
+			<button type="button" class="btn btn-success btn-s" ngf-select ngf-change="vm.attachment.upload($files)"  ngf-multiple="true">
+			<span class="glyphicon glyphicon-plus"></span> Add Attachment
+			</button>
+		</div>
+
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="portlet light bordered">
+	<div class="portlet-body">
+		<div class="form-body">
+			<div class="row">
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<button type="button" class="btn btn-block default">Cancel</button>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="form-actions right">
+						<a href="{{lsprNav.employee.profile.path}}" type="submit" class="btn btn-block blue"><i class="fa fa-save"></i> Submit</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
